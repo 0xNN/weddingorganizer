@@ -59,6 +59,7 @@ $route['pelanggan'] = 'pelanggan/dashboard';
 $route['daftar'] = 'pelanggan/daftar/store';
 $route['logout'] = 'pelanggan/daftar/logout';
 
+$route['gedung']['get'] = 'pelanggan/gedung/index';
 
 // Login Handler
 $route['login']['get'] = 'pelanggan/login/index';

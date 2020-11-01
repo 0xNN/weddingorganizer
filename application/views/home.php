@@ -49,6 +49,9 @@
                         <a class="page-scroll" href="#services">Pelayanan</a>
                     </li>
                     <li>
+                        <a href="<?= base_url() . 'gedung'; ?>">Gedung</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#daftar">Daftar</a>
                     </li>
                     <li>
