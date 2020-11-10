@@ -43,7 +43,8 @@ class Transaksi extends My_Controller {
         'rias' => $this->input->post('rias'),
         'katering' => $this->input->post('katering'),
         'dekorasi' => $this->input->post('dekorasi'),
-        'dokumentasi' => $this->input->post('dokumentasi')
+        'dokumentasi' => $this->input->post('dokumentasi'),
+        'paket' => $this->input->post('paket') //tambahan indri tentang paket
       ];
 
       // var_dump($data_transaksi);

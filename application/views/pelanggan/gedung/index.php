@@ -10,6 +10,7 @@
             echo '<h2>Deskripsi</h2>';
             echo '<p>'.$gedung->deskripsi.'</p>';
             echo '<p>Harga Gedung - '.$gedung->harga_gedung.'</p>';
+            echo '<img src="'.$gedung->foto.'">';
             echo '<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>';
             echo '</div>';
         }

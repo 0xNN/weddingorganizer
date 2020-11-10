@@ -18,6 +18,12 @@ class TransaksiModel extends CI_Model {
     return $this->db->get('pemesanan')->row();
   }
 
+  public function getCount()
+  {
+    $this->db->where('user_id',$this->session->userdata('user_id'));
+    return $this->db->get('pemesanan')->num_rows();
+  }
+
   public function simpanTransaksi($data)
   {
     $this->db->insert('pemesanan',$data);
@@ -64,6 +70,13 @@ class TransaksiModel extends CI_Model {
       ];
       $this->db->insert('pemesanan_dokumentasi',$data_dokumentasi);
     }
+     if ($data['paket'] != null) {
+      $data_paket = [
+        'id_paket' => $id_transaksi,
+        'id_paket' => $data['paket']
+      ];
+      $this->db->insert('pemesanan_paket',$data_paket); //tambahan indri untuk paket
+    }
   }
 
   public function getDataById($id)
@@ -77,11 +90,13 @@ class TransaksiModel extends CI_Model {
     $this->db->join('pemesanan_dokumentasi','pemesanan_dokumentasi.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_gedung','pemesanan_gedung.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_katering','pemesanan_katering.pemesanan_id = pemesanan.id_pemesanan','left');
+    $this->db->join('pemesanan_paket','pemesanan_paket.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('gedung','gedung.gedung_id = pemesanan_gedung.gedung_id','left');
     $this->db->join('dekorasi','dekorasi.dekorasi_id = pemesanan_dekorasi.dekorasi_id','left');
     $this->db->join('rias','rias.rias_id = pemesanan_rias.rias_id','left');
     $this->db->join('katering','katering.katering_id = pemesanan_katering.katering_id','left');
     $this->db->join('dokumentasi','dokumentasi.dokumentasi_id = pemesanan_dokumentasi.dokumentasi_id','left');
+    $this->db->join('paket','paket.id_paket = pemesanan_paket.id_paket','left');
     $query = $this->db->get();
 
     return $query->row();

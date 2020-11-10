@@ -13,7 +13,7 @@ class Dashboard extends My_Controller {
   public function index()
   {
     $data['transaksi'] = $this->TransaksiModel->myTransaction();
-
+    $data['total'] = $this->TransaksiModel->getCount();
     $this->load->view('templates/pelanggan/header');
     $this->load->view('templates/pelanggan/sidemenu');
     $this->load->view('pelanggan/dashboard',$data);

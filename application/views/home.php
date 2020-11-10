@@ -48,9 +48,18 @@
                     <li>
                         <a class="page-scroll" href="#services">Pelayanan</a>
                     </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#gedung">Gedung</a>
+                    </li> -->
                     <li>
-                        <a href="<?= base_url() . 'gedung'; ?>">Gedung</a>
+                        <a class="page-scroll" href="#rias">Rias</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="#dekorasi">Dekorasi</a>
+                    </li>
+                    <!-- <li>
+                        <a href="<?= base_url() . 'gedung'; ?>">Gedung</a>
+                    </li> -->
                     <li>
                         <a class="page-scroll" href="#daftar">Daftar</a>
                     </li>
@@ -63,18 +72,16 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Welcome to Bunda Fitry Wedding Organizer</div>
-                <div class="intro-heading">It's your wedding event partner</div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+        <header>
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-lead-in">Welcome to Bunda Fitry Wedding Organizer</div>
+                    <div class="intro-heading">It's your wedding event partner</div>
+                    <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                </div>
             </div>
-        </div>
-    </header>
-
+        </header>
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -88,28 +95,60 @@
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-building-o fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-venus-mars fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Gedung</h4>
-                    <p class="text-muted">Menyediakan penyewaan gedung dengan kriteria yang Anda butuhkan</p>
+                    <h4 class="service-heading">Wedding Package Complete</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan lengkap dengan biaya </br><b> Rp. 30.000.000.-</b></p>
                 </div>
                 <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Wedding Package A</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan tata rias, baju pengantin & pelaminan dengan biaya </br><b> Rp. 15.000.000.-</b></p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-angellist fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Wedding Package B</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan untuk tenda dan kursi dengan biaya </br><b> Rp. 8.000.000.-</b></p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Wedding Package C</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan mewah dengan biaya </br><b> Rp. 6.000.000.-</b></p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Wedding Package D</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan yang minimalis tetapi tetap megah dengan biaya </br><b> Rp. 4.000.000.-</b></p>
+                </div>
+                <!-- <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Catering</h4>
                     <p class="text-muted">Berikan menu sajian yang terbaik untuk tamu Anda dari chef terbaik kami</p>
-                </div>
+                </div> -->
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Dokumentasi</h4>
-                    <p class="text-muted">Abadikan momen pernikahan Anda dengan hasil yang terbaik dari fotografer terbaik Kami</p>
+                    <h4 class="service-heading">Photography Package</h4>
+                    <p class="text-muted">Menyediakan paket prewedding dengan video shoot yang apik dengan biaya </br><b> Rp. 3.000.000.-</b></p>
                 </div>
-                <div class="col-md-4">
+                <!-- <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-female fa-stack-1x fa-inverse"></i>
@@ -117,7 +156,7 @@
                     <h4 class="service-heading">Rias</h4>
                     <p class="text-muted">Menjadi raja & ratu di acara Anda dengan dandanan terbaik dari penata rias terbaik Kami</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
@@ -125,10 +164,93 @@
                     <h4 class="service-heading">Dekorasi</h4>
                     <p class="text-muted">Jadikan acara Anda meriah dengan dekorasi yang indah</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
+    <!-- Gedung Section -->
+    <!-- <section id="gedung">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Gedung</h2>
+                    <h3 class="section-subheading text-muted">Pilihan tempat menikah sesuai idaman Anda</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <?php
+                    foreach ($dataGedung as $gedung) {
+                        echo '<div class="col-md-2">';
+                        echo '<div class="card" style="width: 18rem;">';
+                        echo '<img class="card-img-top" src="';
+                        echo base_url().'/uploads'.'/'.$gedung->foto.'">';
+                        echo '<div class="card-body">';
+                        // echo '<h5 class="card-title bg-info">'.$gedung->nama_gedung.'</h5>';
+                        // echo '<p class="card-text">'.$gedung->deskripsi.'</p>';
+                        // echo '<span class="badge badge-primary">RP. '.number_format($gedung->harga_gedung, 2).'</span><br/></br>';
+                        // echo '<a href="daftar" class="btn btn-primary">Pesan</a>';
+                        echo '</div></div></div>';
+                    }
+                ?>
+            </div>
+        </div> 
+    </section> -->
+    <!-- Rias Section -->
+    <section id="rias">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Rias</h2>
+                    <h3 class="section-subheading text-muted">Pilihan rias menikah sesuai idaman Anda</h3>
+                </div>
+            </div>
+            <div class="row">
+                <?php
+                    foreach ($dataRias as $rias) {
+                        echo '<div class="box">';
+                        echo '<div class="col-md-3">';
+                        echo '<div class="card-deck">';
+                        echo '<div class="card">';
+                        echo '<img class="card-img-top" src="';
+                        echo base_url().'/uploads'.'/'.$rias->gambar.'" border="5">';
+                        echo '<div class="card-body">';
+                        // echo '<h5 class="card-title bg-info">'.$rias->nama_rias.'</h5>';
+                        // echo '<p class="card-text">'.$rias->deskripsi.'</p>';
+                        // echo '<span class="badge badge-primary">RP. '.number_format($rias->harga_rias, 2).'</span><br/></br>';
+                        // echo '<a href="daftar" class="btn btn-primary">Pesan</a>';
+                        echo '</div></div></div></div></div>';
+
+                    }
+                ?>
+            </div>
+    </section>
+    <!-- Dekorasi Section -->
+    <section id="dekorasi">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Dekorasi</h2>
+                    <h3 class="section-subheading text-muted">Dekorasi yang sesuai dengan impian dan keinginan Anda</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <?php
+                    foreach ($dataDekorasi as $dekorasi) {
+                        echo '<div class="col-md-2">';
+                        echo '<div class="card" style="width: 18rem;">';
+                        echo '<img class="card-img-top" src="';
+                        echo base_url().'/uploads'.'/'.$dekorasi->foto.'">';
+                        echo '<div class="card-body">';
+                        // echo '<h5 class="card-title bg-info">'.$dekorasi->nama_dekorasi.'</h5>';
+                        // echo '<p class="card-text">'.$dekorasi->deskripsi.'</p>';
+                        // echo '<span class="badge badge-primary">RP. '.number_format($dekorasi->harga_dekorasi, 2).'</span><br/></br>';
+                        // echo '<a href="daftar" class="btn btn-primary">Pesan</a>';
+                        echo '</div></div></div>';
+                    }
+                ?>
+            </div>
+        </div> 
+    </section>
     <!-- Contact Section -->
     <section id="daftar">
         <div class="container">
@@ -181,22 +303,25 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="https://twitter.com/login?lang=id"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://id-id.facebook.com/login/"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
+                    <i class="fa fa-volume-control-phone" aria-hidden="true"><b>   Telp :  027114567</b></i>
+                </div>
+                <!-- <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li><a href="#">Contact Us</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a href="#">0711-46572</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>

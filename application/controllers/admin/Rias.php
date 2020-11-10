@@ -7,7 +7,7 @@ class Rias extends Admin_Controller {
     {
         parent::__construct();
         $config['upload_path'] = './uploads/';
-        $config['allowed_types'] = 'jpg|png';
+        $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max-size'] = 10240;
 
         $this->load->library('upload',$config);

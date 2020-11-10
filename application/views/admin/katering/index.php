@@ -7,11 +7,11 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-cutlery"></i> Data Katering</h4>
+            <h4 class="panel-title"><i class="fa fa-heart"></i> Data Paket</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
-                <a href="<?php echo base_url() . 'admin/katering/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah Katering</a>
+                <a href="<?php echo base_url() . 'admin/katering/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah Paket</a>
             </div>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
@@ -31,7 +31,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $katering->nama_katering ?></td>
                             <td><?= $katering->jumlah ?></td>
-                            <td><?= $katering->harga_katering ?></td>
+                            <td width="110px">Rp <?= number_format($katering->harga_katering,0) ?></td>
                             <td><?= $katering->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/katering/edit/'.$katering->katering_id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>

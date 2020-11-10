@@ -35,7 +35,7 @@
                     </div>
                     <div class="panel-body">
                         <?php if (count( (array) $transaksi) != null): ?>
-                                Anda memiliki <?= count( (array) $transaksi) ?> pemesanan : <br>
+                                Anda memiliki <?= $total ?> pemesanan : <br>
                                 <ul class="list-unstyled">
                                   <li><a href="<?= base_url() . 'lihat/transaksi/' . $transaksi->id_pemesanan ?>" target="_blank" >Pada tanggal <?= nice_date($transaksi->tgl_acara,'d-m-Y') ?> <small><span class="glyphicon glyphicon-new-window"></span></small></a></li>
                                 </ul>
@@ -77,17 +77,43 @@
                               <div id="tab">
                                   <!-- Nav tabs -->
                                   <ul class="nav nav-tabs" role="tablist">
-                                      <li role="presentation" class="active"><a href="#gedung" aria-controls="gedung" role="tab" data-toggle="tab"><i class="fa fa-building-o fa-fw"></i>  Pilih Gedung</a></li>
-                                      <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Pilih Dekorasi</a></li>
-                                      <li role="presentation"><a href="#rias" aria-controls="rias" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Pilih Rias</a></li>
-                                      <li role="presentation"><a href="#katering" aria-controls="katering" role="tab" data-toggle="tab"><i class="fa fa-cutlery fa-fw"></i>  Pilih Katering</a></li>
-                                      <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Pilih Dokumentasi</a></li>
+                                    <!--   <li role="presentation" class="active"><a href="#gedung" aria-controls="gedung" role="tab" data-toggle="tab"><i class="fa fa-building-o fa-fw"></i>  Pilih Gedung</a></li> -->
+                                     <!-- <li role="presentation"><a href="#paket" aria-controls="paket" role="tab" data-toggle="tab"><i class="fa fa-heart fa-fw"></i>  Pilih Paket</a></li> -->
+                                     <li role="presentation"><a href="#katering" aria-controls="katering" role="tab" data-toggle="tab"><i class="fa fa-heart fa-fw"></i>  Pilih Paket</a></li>
+
+                                     <!--  <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Pilih Dekorasi</a></li>
+
+                                      <li role="presentation"><a href="#rias" aria-controls="rias" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Pilih Rias</a></li> -->
+                            
+                                      <!-- <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Pilih Dokumentasi</a></li> -->
+                    
                                   </ul>
 
                                   <!-- Tab panes -->
                                   <div class="tab-content">
+                                       <!-- paket -->
+                                    <div role="tabpanel" class="tab-pane" id="paket">
+                                      <div class="row">
+                                        <?php foreach ($this->db->get('paket')->result() as $paket): ?>
+                                          <div class="col-sm-4">
+                                              <label class="option">
+                                                  <div class="thumbnail">
+                                                      <input type="radio" name="paket" value="<?= $paket->id_paket ?>">
+                                                      <!-- <img src="<?= base_url() . 'uploads/' . $katering->gambar; ?>" alt="" class="gambar-gedung"> -->
+                                                      <div class="caption">
+                                                          <h4><?= $paket->nama_paket; ?></h4>
+                                                          <p class="price">Rp <?= number_format($paket->harga_paket,0,',','.'); ?></p>
+                                                          <p class="alamat"><?= $paket->keterangan_paket; ?></p>
+                                                      </div> <!---indri nambah i -->
+                                                  </div>
+                                              </label>
+                                          </div>
+                                        <?php endforeach; ?>
+                                      </div>
+                                    </div>
+                                    <!-- End of Paket -->
                                     <!-- Gedung -->
-                                    <div role="tabpanel" class="tab-pane active" id="gedung">
+                                   <!--  <div role="tabpanel" class="tab-pane active" id="gedung">
                                       <div class="row">
                                         <?php if (count($this->DashboardModel->dataGedung($date)) > 0): ?>
                                           <?php foreach ($this->DashboardModel->dataGedung($date) as $gedung): ?>
@@ -109,8 +135,8 @@
                                           <h4><center>Maaf tidak ada gedung yang tersedia pada tanggal ini</center></h4>
                                         <?php endif; ?>
                                       </div>
-                                    </div>
-                                    <!-- End of Gedung -->
+                                    </div> -->
+                                    <!-- End of Gedung --
 
                                     <!-- Dekorasi -->
                                     <div role="tabpanel" class="tab-pane" id="dekorasi">

@@ -63,6 +63,7 @@ class Gedung extends Admin_Controller {
             $this->upload->do_upload('foto');
             $data['foto'] = $this->upload->data('file_name');
 
+            // print_r($data);
             // var_dump($data);
 
             // INSERT INTO DATABASE

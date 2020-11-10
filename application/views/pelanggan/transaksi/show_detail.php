@@ -25,14 +25,14 @@
         <table class="table table-bordered table-condensed table-responsive">
           <thead>
             <tr>
-              <th>#</th>
+              <th>No</th>
               <th>Jenis Pesanan</th>
               <th>Nama</th>
               <th>Harga</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+         <!--    <tr>
               <td>1</td>
               <td> Sewa Gedung</td>
               <td><?= $detail->nama_gedung ?></td>
@@ -49,19 +49,19 @@
               <td> Sewa Rias</td>
               <td><?= $detail->nama_rias ?></td>
               <td>Rp <?= number_format($detail->harga_rias,0,',','.') ?></td>
-            </tr>
+            </tr> -->
             <tr>
-              <td>4</td>
-              <td> Sewa Katering</td>
+              <td>1</td>
+              <td> Pilihan Paket</td>
               <td><?= $detail->nama_katering ?></td>
               <td>Rp <?= number_format($detail->harga_katering,0,',','.') ?></td>
             </tr>
-            <tr>
+          <!--   <tr>
               <td>5</td>
               <td> Sewa Dokumentasi</td>
               <td><?= $detail->nama_dokumentasi ?></td>
               <td>Rp <?= number_format($detail->harga_dokumentasi,0,',','.') ?></td>
-            </tr>
+            </tr> -->
             <tr>
               <th colspan="3">Total</th>
               <?php
