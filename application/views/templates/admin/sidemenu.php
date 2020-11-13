@@ -15,7 +15,7 @@
             <a href="<?= base_url() . 'admin/dokumentasi'; ?>" class="list-group-item <?= ($uri == 'dokumentasi') ? 'active' : ''; ?>"><i class="fa fa-camera-retro fa-fw"></i> Data Dokumentasi</a>
             <a href="<?= base_url() . 'admin/rias'; ?>" class="list-group-item <?= ($uri == 'rias') ? 'active' : ''; ?>"><i class="fa fa-female fa-fw"></i> Data Rias</a> 
             <a href="<?= base_url() . 'admin/user'; ?>" class="list-group-item <?= ($uri == 'user') ? 'active' : ''; ?>"><i class="fa fa-user fa-fw"></i> Data User</a>
-            <a href="<?= base_url() . 'admin/user'; ?>" class="list-group-item <?= ($uri == 'user') ? 'active' : ''; ?>"><i class="fa fa-male fa-fw"></i> Data Pegawai</a>
+            <a href="<?= base_url() . 'admin/pegawai'; ?>" class="list-group-item <?= ($uri == 'pegawai') ? 'active' : ''; ?>"><i class="fa fa-male fa-fw"></i> Data Pegawai</a>
         </div>
     </div>
     <div class="panel panel-primary">
@@ -33,9 +33,9 @@
             <h3 class="panel-title"><i class="fa fa-hdd-o"></i> Laporan</h3>
         </div>
         <div class="list-group">
-            <a href="<?php echo base_url() . 'admin/pelanggan'; ?>" class="list-group-item <?= ($uri == 'pelanggan') ? 'active' : ''; ?>"><i class="fa fa-male fa-fw"></i> Laporan Pelanggan</a>
-            <a href="<?php echo base_url() . 'admin/pemesanan'; ?>" class="list-group-item <?= ($uri == 'pemesanan') ? 'active' : ''; ?>"><i class="fa fa-envelope-o fa-fw"></i> Laporan Pemesanan</a>
-            <a href="<?php echo base_url() . 'admin/pembayaran'; ?>" class="list-group-item <?= ($uri == 'pembayaran') ? 'active' : ''; ?>"><i class="fa fa-file-o fa-fw"></i> Laporan Pegawai</a>
+            <a href="<?php echo base_url() . 'admin/laporanpel'; ?>" class="list-group-item <?= ($uri == 'pelanggan') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Laporan Pelanggan</a>
+            <a href="<?php echo base_url() . 'admin/laporanpesan'; ?>" class="list-group-item <?= ($uri == 'pemesanan') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Laporan Pemesanan</a>
+            <a href="<?php echo base_url() . 'admin/laporan'; ?>" class="list-group-item <?= ($uri == 'pegawai') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Laporan Pegawai</a>
         </div>
     </div>
 </div>
