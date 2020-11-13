@@ -51,7 +51,6 @@ class DashboardModel extends CI_Model {
   {
     $this->db->select('*');
     $this->db->from('pemesanan');
-    $this->db->where('id_pemesanan',$id);
     $this->db->join('pelanggan','pelanggan_id = pemesanan.user_id','left');
     $this->db->join('pemesanan_dekorasi','pemesanan_dekorasi.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_rias','pemesanan_rias.pemesanan_id = pemesanan.id_pemesanan','left');
@@ -67,7 +66,7 @@ class DashboardModel extends CI_Model {
     $this->db->join('paket','paket.id_paket = pemesanan_paket.id_paket','left');
     $query = $this->db->get();
 
-    return $query->row();
+    return $query->result();
   }
 
 }

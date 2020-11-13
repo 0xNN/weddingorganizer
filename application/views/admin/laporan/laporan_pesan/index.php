@@ -25,12 +25,12 @@
                     <?php foreach($pemesanans as $pemesanan): ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td>#<?= $transaksi->id_pemesanan ?></td>
-                            <td><?= $transaksi->nama ?></td>
-                            <td><?= $transaksi->status ?></td>
-                            <td><?= $transaki->no_telp ?></td>
+                            <td>#<?= $pemesanan->id_pemesanan ?></td>
+                            <td><?= $pemesanan->nama ?></td>
+                            <td><?= $pemesanan->status ?></td>
+                            <td><?= $pemesanan->no_telp ?></td>
                             <td width="10%">
-                                <a href="<?php echo base_url() . 'admin/pemesanan/detail/'.$transaksi->id_pemesanan; ?>" class="btn btn-xs btn-info" title="Lihat"><i class="fa fa-eye fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/pemesanan/detail/'.$pemesanan->id_pemesanan; ?>" class="btn btn-xs btn-info" title="Lihat"><i class="fa fa-eye fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

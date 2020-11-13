@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class laporanpel extends CI_Controller {
+class laporanpesan extends CI_Controller {
 
     public function __construct()
     {
@@ -14,7 +14,6 @@ class laporanpel extends CI_Controller {
     {
         $data['pemesanans'] = $this->DashboardModel->dataLaporanPemesanan();
 
-        echo $data['pemesanans'];
         $this->load->view('templates/admin/header');
         $this->load->view('templates/admin/sidemenu');
         $this->load->view('admin/laporan/laporan_pesan/index',$data);
