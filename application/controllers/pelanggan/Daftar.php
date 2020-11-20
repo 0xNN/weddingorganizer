@@ -8,6 +8,7 @@ class Daftar extends CI_Controller {
         $this->form_validation->set_rules('no_telp','No Telp','required|numeric|is_unique[pelanggan.no_telp]');
         $this->form_validation->set_rules('alamat','Alamat','required');
         $this->form_validation->set_rules('email','Email','required|is_unique[pelanggan.email]');
+        $this->form_validation->set_rules('password','Password','required');
     }
 
     public function store()
@@ -15,7 +16,7 @@ class Daftar extends CI_Controller {
         $this->validation();
 
         // generate password
-        $password = rand(111,999);
+        $password = $this->input->post('password');
 
         if ($this->form_validation->run() == FALSE) {
             $error = $this->form_validation->error_array();
@@ -27,7 +28,7 @@ class Daftar extends CI_Controller {
                 'no_telp' => $this->input->post('no_telp'),
                 'alamat' => $this->input->post('alamat'),
                 'email' => $this->input->post('email'),
-                'password' => $password
+                'password' => $password,
             );
 
             // INSERT INTO DATABASE

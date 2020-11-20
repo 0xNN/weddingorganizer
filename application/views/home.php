@@ -21,6 +21,24 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <style>
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        }
+
+        .title {
+        color: grey;
+        font-size: 18px;
+        }
+
+        button:hover, a:hover {
+        opacity: 0.7;
+        }
+
+    </style>
     <!-- Theme CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -29,7 +47,7 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-info navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -45,7 +63,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                     <li>
+                    <li>
                         <a href="<?= base_url() . 'home'; ?>">Home</a>
                     </li>
 
@@ -95,43 +113,33 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-6">
-                        <span>
-                        <p>
-                        <img src="<?php echo base_url(); ?>assets/images/oke7.png"> 
-                      <!--   <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-venus-mars fa-stack-1x fa-inverse"></i> -->
-                        </span>
-                        </p>
-                    <h4 class="service-heading">Wedding Paket Lengkap</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan lengkap dari mulai make up, baju pengantin, dekorasi pelaminan, dekorasi kamar, kontak amplop, kipas angin sampai urusan prewedding, video dan foto  </br><b> Rp. 30.000.000.-</b></p>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <div></div>
+                        <img src="<?php echo base_url(); ?>assets/images/oke7_1.jpg" width="60%" height="60%">
+                        <p class="title">Wedding Paket Lengkap</p>
+                        <p>Menyediakan paket pernikahan lengkap dari mulai make up, baju pengantin, dekorasi pelaminan, dekorasi kamar, kontak amplop, kipas angin sampai urusan prewedding, video dan foto  </br><b> Rp. 30.000.000.-</b></p>
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                        <span>
-                        <p>
-                        <img src="<?php echo base_url(); ?>assets/images/oke2.png"> 
-                       <!--  <span class="fa-stack fa-4x">
-                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                        </span> -->
-                         </span>
-                         </p>
-                    <h4 class="service-heading">Wedding Paket A</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan Make Up, Baju pengantin (Ortu & Mertua), henna, dekorasi pelaminan, dekorasi kamar, kontak amplop, dan kipas angin </br><b> Rp. 15.000.000.-</b></p> 
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="<?php echo base_url(); ?>assets/images/oke2_1.jpg" width="60%" height="70%"> 
+                        <p class="title">Wedding Paket A</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan Make Up, Baju pengantin (Ortu & Mertua), henna, dekorasi pelaminan, dekorasi kamar, kontak amplop, dan kipas angin </br><b> Rp. 15.000.000.-</b></p> 
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <span>
-                        <p>
-                        <img src="<?php echo base_url(); ?>assets/images/oke1.png"> 
-                        <!-- <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-angellist fa-stack-1x fa-inverse"></i> -->
-                        </span>
-                        </p>
-                    <h4 class="service-heading">Wedding Paket B</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk tenda , kursi yang dengan dan kipas angin </br><b> Rp. 8.000.000.-</b></p>
-                </div> </br>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="<?php echo base_url(); ?>assets/images/oke1_1.jpg" width="60%" height="90%"> 
+                        <p class="title">Wedding Paket B</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk tenda , kursi yang dengan dan kipas angin </br><b> Rp. 8.000.000.-</b></p>
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-4">
                     <span>
                         <p>
@@ -156,14 +164,6 @@
                     <h4 class="service-heading">Wedding Paket D</h4>
                     <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan minimalis dan make up pengantin</br><b> Rp. 4.000.000.-</b></p>
                 </div>
-                <!-- <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Catering</h4>
-                    <p class="text-muted">Berikan menu sajian yang terbaik untuk tamu Anda dari chef terbaik kami</p>
-                </div> -->
                 <div class="col-md-6">
                     <span>
                     <p>
@@ -187,23 +187,7 @@
                     <h4 class="service-heading">Paket Sewa Kipas Angin</h4>
                     <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan sewa kipas angin blower </br><b></b></p>
                 </div>
-                <!-- <div class="col-md-3">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-female fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Rias</h4>
-                    <p class="text-muted">Menjadi raja & ratu di acara Anda dengan dandanan terbaik dari penata rias terbaik Kami</p>
-                </div>
-                <div class="col-md-3">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Dekorasi</h4>
-                    <p class="text-muted">Jadikan acara Anda meriah dengan dekorasi yang indah</p>
-                </div>
-            </div> -->
+            </div>
         </div>
     </section>
 
@@ -320,6 +304,10 @@
                                 <div class="form-group">
                                     <input type="text" name="alamat" class="form-control" placeholder="Alamat *" value="<?php echo set_value('nama',isset($pelanggan->nama) ? $pelanggan->nama : ''); ?>" required>
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('alamat'); ?></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" class="form-control" placeholder="Password *" value="" required>
+                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('password'); ?></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
