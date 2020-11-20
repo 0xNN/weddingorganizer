@@ -338,15 +338,9 @@
         <div class="container">
             <div class="row">
                 <div class=col-md-4>
-                    <h3>WEDDING</h3>
-                    <h3>WEDDING</h3>
-                </div>
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2020</span>
-                </div>
-                <div class="col-md-4">
+                    <h4>Wedding Organizer</h4>
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/login?lang=id"><i class="fa fa-twitter"></i></a>
+                        <li><a href="https://gmail.com/"><i class="fa fa-envelope"></i></a>
                         </li>
                         <li><a href="https://id-id.facebook.com/login/"><i class="fa fa-facebook"></i></a>
                         </li>
@@ -354,17 +348,46 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <i class="fa fa-volume-control-phone" aria-hidden="true"><b>   Telp :  027114567</b></i>
-                </div>
-                <!-- <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Contact Us</a>
+               <!--   <div class="col-md-3">
+                    <div class="row">
+                    <h4>Menu Beranda</h4>
+                    <ul class>
+                    <li class="hidden">
+                    <a href="#page-top"></a>
+                    </li>
+                        <li>
+                        <a href="<?= base_url() . 'home'; ?>">Home</a>
                         </li>
-                        <li><a href="#">0711-46572</a>
+                        <li>
+                             <a class="page-scroll" href="#services">PELAYANAN</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#rias">MAKE UP</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#dekorasi">DEKORASI</a>
+                        </li>
+                         <li>
+                        <a href="<?= base_url() . 'gedung'; ?>">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#daftar">Daftar</a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() . 'login'; ?>">Login</a>
                         </li>
                     </ul>
+                </div>
                 </div> -->
+                 <div class="col-md-4">
+                    <h4>INFORMASI PERUSAHAAN</h4>
+                        <p align="left"><i class="fa fa-envelope"> Email   : </i> bundafitrypali@gmail.com </p>
+                        <p align="left"><i class="fa fa-phone"> Telp   : </i> (+6281367967760) </p>
+                        <p align="left"><i class="fa fa-map-marker"> Alamat : </i> Jl.Taman Siswa Kel. Talang Ubi selatan, Kec. Talang Ubi Pendopo, Kabupaten Penukal Abab Lematang Ilir </p>
+                </div> 
+                <div class="col-md-4">
+                    <h4>METODE PEMBAYARAN</h4>
+                </div>
             </div>
         </div>
     </footer>
