@@ -22,7 +22,7 @@
                     </div>
                     <div class="panel-body">
                         <ul class="list-unstyled">
-                            <li><strong>Username</strong> : Gunakan email Anda</li>
+                            <li><strong>Username</strong> : <?= $this->session->userdata('email') ?></li>
                             <li><strong>Password</strong> : <?= $this->session->userdata('password') ?></li>
                         </ul>
                     </div>
