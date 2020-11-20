@@ -25,11 +25,11 @@ class Transaksi extends My_Controller {
     public function store()
     {
 
-      $id_transaksi = str_replace('-','',$this->input->post('tgl_acara')) . $this->session->userdata('user_id');
+      $id_transaksi = str_replace('-','',$this->input->post('tgl_acara')) . $this->session->userdata('pe;anggan_id');
 
       $data = [
         'id_pemesanan' => $id_transaksi,
-        'user_id' => $this->session->user_id,
+        'pelanggan_id' => $this->session->user_id,
         'tgl_acara' => $this->input->post('tgl_acara'),
         'status' => 'pending'
       ];

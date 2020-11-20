@@ -7,20 +7,20 @@ class TransaksiModel extends CI_Model {
   {
     $this->db->select('*');
     $this->db->from('pemesanan');
-    $this->db->join('pelanggan','pelanggan.pelanggan_id = pemesanan.user_id');
+    $this->db->join('pelanggan','pelanggan.pelanggan_id = pemesanan.pelanggan_id');
     $query = $this->db->get();
     return $query->result();
   }
 
   public function myTransaction()
   {
-    $this->db->where('user_id',$this->session->userdata('user_id'));
+    $this->db->where('pelanggan_id',$this->session->userdata('user_id'));
     return $this->db->get('pemesanan')->row();
   }
 
   public function getCount()
   {
-    $this->db->where('user_id',$this->session->userdata('user_id'));
+    $this->db->where('pelanggan_id',$this->session->userdata('user_id'));
     return $this->db->get('pemesanan')->num_rows();
   }
 
@@ -84,7 +84,7 @@ class TransaksiModel extends CI_Model {
     $this->db->select('*');
     $this->db->from('pemesanan');
     $this->db->where('id_pemesanan',$id);
-    $this->db->join('pelanggan','pelanggan_id = pemesanan.user_id','left');
+    $this->db->join('pelanggan','pelanggan.pelanggan_id = pemesanan.pelanggan_id','left');
     $this->db->join('pemesanan_dekorasi','pemesanan_dekorasi.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_rias','pemesanan_rias.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_dokumentasi','pemesanan_dokumentasi.pemesanan_id = pemesanan.id_pemesanan','left');

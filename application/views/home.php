@@ -45,6 +45,10 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                     <li>
+                        <a href="<?= base_url() . 'home'; ?>">Home</a>
+                    </li>
+
                     <li>
                         <a class="page-scroll" href="#services">Pelayanan</a>
                     </li>
@@ -52,14 +56,14 @@
                         <a class="page-scroll" href="#gedung">Gedung</a>
                     </li> -->
                     <li>
-                        <a class="page-scroll" href="#rias">Rias</a>
+                        <a class="page-scroll" href="#rias">Make Up</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#dekorasi">Dekorasi</a>
                     </li>
-                    <!-- <li>
-                        <a href="<?= base_url() . 'gedung'; ?>">Gedung</a>
-                    </li> -->
+                    <li>
+                        <a href="<?= base_url() . 'gedung'; ?>">Tentang Kami</a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="#daftar">Daftar</a>
                     </li>
@@ -78,7 +82,6 @@
                 <div class="intro-text">
                     <div class="intro-lead-in">Welcome to Bunda Fitry Wedding Organizer</div>
                     <div class="intro-heading">It's your wedding event partner</div>
-                    <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
                 </div>
             </div>
         </header>
@@ -92,45 +95,66 @@
                 </div>
             </div>
             <div class="row text-center">
+                <div class="col-md-6">
+                        <span>
+                        <p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke7.png"> 
+                      <!--   <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-venus-mars fa-stack-1x fa-inverse"></i> -->
+                        </span>
+                        </p>
+                    <h4 class="service-heading">Wedding Paket Lengkap</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan lengkap dari mulai make up, baju pengantin, dekorasi pelaminan, dekorasi kamar, kontak amplop, kipas angin sampai urusan prewedding, video dan foto  </br><b> Rp. 30.000.000.-</b></p>
+                </div>
+                <div class="col-md-6">
+                        <span>
+                        <p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke2.png"> 
+                       <!--  <span class="fa-stack fa-4x">
+                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                        </span> -->
+                         </span>
+                         </p>
+                    <h4 class="service-heading">Wedding Paket A</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan Make Up, Baju pengantin (Ortu & Mertua), henna, dekorasi pelaminan, dekorasi kamar, kontak amplop, dan kipas angin </br><b> Rp. 15.000.000.-</b></p> 
+                </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
+                    <span>
+                        <p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke1.png"> 
+                        <!-- <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-venus-mars fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Wedding Package Complete</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan lengkap dengan biaya </br><b> Rp. 30.000.000.-</b></p>
+                            <i class="fa fa-angellist fa-stack-1x fa-inverse"></i> -->
+                        </span>
+                        </p>
+                    <h4 class="service-heading">Wedding Paket B</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk tenda , kursi yang dengan dan kipas angin </br><b> Rp. 8.000.000.-</b></p>
+                </div> </br>
+                <div class="col-md-4">
+                    <span>
+                        <p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke4.png"> 
+                        <!-- <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-heart fa-stack-1x fa-inverse"></i> -->
+                        </span>
+                        </p>
+                    <h4 class="service-heading">Wedding Paket C</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan, kontak amplop dan kursi tamu</br><b> Rp. 6.000.000.-</b></p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Wedding Package A</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan tata rias, baju pengantin & pelaminan dengan biaya </br><b> Rp. 15.000.000.-</b></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-angellist fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Wedding Package B</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan untuk tenda dan kursi dengan biaya </br><b> Rp. 8.000.000.-</b></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Wedding Package C</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan mewah dengan biaya </br><b> Rp. 6.000.000.-</b></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-star fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Wedding Package D</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan yang minimalis tetapi tetap megah dengan biaya </br><b> Rp. 4.000.000.-</b></p>
+                    <span>
+                        <p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke5.png"> 
+                        <!-- <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-star fa-stack-1x fa-inverse"></i> -->
+                        </span>
+                        </p>
+                    <h4 class="service-heading">Wedding Paket D</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan minimalis dan make up pengantin</br><b> Rp. 4.000.000.-</b></p>
                 </div>
                 <!-- <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -140,13 +164,28 @@
                     <h4 class="service-heading">Catering</h4>
                     <p class="text-muted">Berikan menu sajian yang terbaik untuk tamu Anda dari chef terbaik kami</p>
                 </div> -->
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+                <div class="col-md-6">
+                    <span>
+                    <p>
+                    <img src="<?php echo base_url(); ?>assets/images/oke3.png"> 
+                       <!--  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i> -->
+                    </p>
                     </span>
-                    <h4 class="service-heading">Photography Package</h4>
-                    <p class="text-muted">Menyediakan paket prewedding dengan video shoot yang apik dengan biaya </br><b> Rp. 3.000.000.-</b></p>
+                    <h4 class="service-heading">Paket Fotografi</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan prewedding dan foto serta video shoot </br><b> Rp. 3.000.000.-</b></p>
+                </div>
+                <div class="col-md-6">
+                    <span>
+                        <p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke6.png"> 
+                        <!-- <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i> -->
+                        </span>
+                         </p>
+                    <h4 class="service-heading">Paket Sewa Kipas Angin</h4>
+                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan sewa kipas angin blower </br><b></b></p>
                 </div>
                 <!-- <div class="col-md-3">
                     <span class="fa-stack fa-4x">
@@ -200,8 +239,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Rias</h2>
-                    <h3 class="section-subheading text-muted">Pilihan rias menikah sesuai idaman Anda</h3>
+                    <h2 class="section-heading">MAKE UP</h2>
+                    <h3 class="section-subheading text-muted">Menjadi cantik dihari pernikahan sesuai dengan idaman anda!!!</h3>
                 </div>
             </div>
             <div class="row">
@@ -230,7 +269,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Dekorasi</h2>
-                    <h3 class="section-subheading text-muted">Dekorasi yang sesuai dengan impian dan keinginan Anda</h3>
+                    <h3 class="section-subheading text-muted">Dekorasi yang sesuai dengan impian dan keinginan Anda!!!</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -298,6 +337,10 @@
     <footer>
         <div class="container">
             <div class="row">
+                <div class=col-md-4>
+                    <h3>WEDDING</h3>
+                    <h3>WEDDING</h3>
+                </div>
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; Your Website 2020</span>
                 </div>
