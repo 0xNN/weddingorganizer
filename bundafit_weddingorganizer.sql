@@ -1,5 +1,5 @@
 /*
-SQLyog Professional v12.4.1 (64 bit)
+SQLyog Ultimate v12.5.1 (64 bit)
 MySQL - 10.1.38-MariaDB : Database - weddingorganizer
 *********************************************************************
 */
@@ -27,9 +27,29 @@ CREATE TABLE `dekorasi` (
   `harga_dekorasi` decimal(11,0) NOT NULL,
   `foto` varchar(255) NOT NULL,
   PRIMARY KEY (`dekorasi_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 /*Data for the table `dekorasi` */
+
+insert  into `dekorasi`(`dekorasi_id`,`nama_dekorasi`,`deskripsi`,`harga_dekorasi`,`foto`) values 
+(1,'-','-',0,'FB_IMG_158235622340130861.jpg'),
+(2,'-','-',0,'FB_IMG_158235647308183681.jpg'),
+(3,'-','-',0,'FB_IMG_158235682552581331.jpg'),
+(4,'-','-',0,'FB_IMG_158235693981739331.jpg'),
+(5,'-','-',0,'FB_IMG_158235696977749111.jpg'),
+(6,'-','-',0,'FB_IMG_158235697473060331.jpg'),
+(7,'-','-',0,'FB_IMG_158235708792763941.jpg'),
+(8,'-','-',0,'FB_IMG_15823571064570563.jpg'),
+(9,'-','-',0,'FB_IMG_158235711055849551.jpg'),
+(10,'-','-',0,'FB_IMG_15823571568958833.jpg'),
+(11,'-','-',0,'FB_IMG_158235716327188041.jpg'),
+(12,'-','-',0,'FB_IMG_158235718472456171.jpg'),
+(13,'-','-',0,'FB_IMG_15823572070793307.jpg'),
+(14,'-','-',0,'FB_IMG_158235745878168081.jpg'),
+(15,'-','-',0,'FB_IMG_158235746405543521.jpg'),
+(16,'-','-',0,'FB_IMG_158235748050560311.jpg'),
+(17,'-','-',0,'FB_IMG_158235758496628581.jpg'),
+(18,'-','-',0,'FB_IMG_15823576438100926.jpg');
 
 /*Table structure for table `dokumentasi` */
 
@@ -71,9 +91,17 @@ CREATE TABLE `katering` (
   `jumlah` decimal(5,0) NOT NULL,
   `harga_katering` decimal(11,0) NOT NULL,
   PRIMARY KEY (`katering_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 /*Data for the table `katering` */
+
+insert  into `katering`(`katering_id`,`nama_katering`,`deskripsi`,`jumlah`,`harga_katering`) values 
+(1,'Wedding Package Complete','Dilengkapi dengan fasilitas full mulai dari tata rias, busana pengantin, dekorasi pelaminan, tenda, kursi, prewedding dan video shooting',1,30000000),
+(2,'Wedding Package A','Dilengkapi dengan fasilitas berupa tata rias, baju penggantin dan dekorasi pelaminan',1,15000000),
+(3,'Wedding Package B','Dilengkapi dengan fasilitas pernikahan berupa tenda dan kursi',1,8000000),
+(4,'Wedding Package C','Dilengkapi dengan dekorasi pelaminan mewah untuk pernikahan anda',1,6000000),
+(5,'Wedding Package D','Dilengkapi dengan dekorasi pelaminan yang minimalis untuk anda',1,4000000),
+(6,'Photography Package','Dilengkapi dengan fasilitas prewedding dan video shoot untuk anda',1,3000000);
 
 /*Table structure for table `konfirmasi` */
 
@@ -88,9 +116,12 @@ CREATE TABLE `konfirmasi` (
   `pemilik` varchar(25) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `konfirmasi` */
+
+insert  into `konfirmasi`(`id`,`pelanggan_id`,`pemesanan_id`,`no_rek`,`nama_bank`,`pemilik`,`foto`) values 
+(1,1,202011281,'232323','BRI','Anisa','khs_indri.png');
 
 /*Table structure for table `migrations` */
 
@@ -156,9 +187,12 @@ CREATE TABLE `pelanggan` (
   `email` varchar(255) NOT NULL,
   `password` varchar(11) NOT NULL DEFAULT '',
   PRIMARY KEY (`pelanggan_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `pelanggan` */
+
+insert  into `pelanggan`(`pelanggan_id`,`nama`,`no_telp`,`alamat`,`email`,`password`) values 
+(1,'anisa','087654324123','palembnag','anisahumairah@gmail.com','579');
 
 /*Table structure for table `pemesanan` */
 
@@ -169,10 +203,14 @@ CREATE TABLE `pemesanan` (
   `user_id` int(11) unsigned NOT NULL,
   `tgl_acara` varchar(10) NOT NULL,
   `status` varchar(15) NOT NULL,
+  `pelanggan_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_pemesanan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `pemesanan` */
+
+insert  into `pemesanan`(`id_pemesanan`,`user_id`,`tgl_acara`,`status`,`pelanggan_id`) values 
+('202011281',0,'2020-11-28','pending',1);
 
 /*Table structure for table `pemesanan_dekorasi` */
 
@@ -222,9 +260,12 @@ CREATE TABLE `pemesanan_katering` (
   `pemesanan_id` varchar(15) NOT NULL,
   `katering_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `pemesanan_katering` */
+
+insert  into `pemesanan_katering`(`id`,`pemesanan_id`,`katering_id`) values 
+(1,'202011281',3);
 
 /*Table structure for table `pemesanan_paket` */
 
@@ -266,9 +307,15 @@ CREATE TABLE `rias` (
   `deskripsi` varchar(255) NOT NULL,
   `harga_rias` decimal(11,0) NOT NULL,
   PRIMARY KEY (`rias_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 /*Data for the table `rias` */
+
+insert  into `rias`(`rias_id`,`nama_rias`,`gambar`,`deskripsi`,`harga_rias`) values 
+(4,'-','42.jpg','-',0),
+(9,'-','91.jpg','-',0),
+(14,'-','13.jpg','-',0),
+(15,'-','14.jpg','-',0);
 
 /*Table structure for table `users` */
 
@@ -287,7 +334,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`user_id`,`name`,`username`,`no_telp`,`password`) values 
-(1,'admin','admin','','admin');
+(1,'admin','admin','','21232f297a57a5a743894a0e4a801fc3');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

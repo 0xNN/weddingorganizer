@@ -119,7 +119,7 @@
                         <img src="<?php echo base_url(); ?>assets/images/oke7_1.jpg" width="60%" height="60%">
                         <p class="title">Wedding Paket Lengkap</p>
                         <p>Menyediakan paket pernikahan lengkap dari mulai make up, baju pengantin, dekorasi pelaminan, dekorasi kamar, kontak amplop, kipas angin sampai urusan prewedding, video dan foto  </br><b> Rp. 30.000.000.-</b></p>
-                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                        <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketlengkap'; ?>">Lihat Paket</button></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
@@ -132,63 +132,47 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke1_1.jpg" width="60%" height="90%"> 
-                        <p class="title">Wedding Paket B</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk tenda , kursi yang dengan dan kipas angin </br><b> Rp. 8.000.000.-</b></p>
+                        <img src="<?php echo base_url(); ?>assets/images/oke3-1.jpg" width="60%" height="90%"> 
+                        <p class="title">Paket Fotografi</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan prewedding serta video shoot </br><b> Rp. 3.000.000.-</b></p>
                         <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <span>
-                        <p>
-                        <img src="<?php echo base_url(); ?>assets/images/oke4.png"> 
-                        <!-- <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-heart fa-stack-1x fa-inverse"></i> -->
-                        </span>
-                        </p>
-                    <h4 class="service-heading">Wedding Paket C</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan, kontak amplop dan kursi tamu</br><b> Rp. 6.000.000.-</b></p>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="<?php echo base_url(); ?>assets/images/oke5_1.jpg" width="60%" height="90%"> 
+                        <p class="title">Wedding Paket D</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan minimalis dan make up penggantin</br><b> Rp. 4.000.000.-</b></p>
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <span>
-                        <p>
-                        <img src="<?php echo base_url(); ?>assets/images/oke5.png"> 
-                        <!-- <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-star fa-stack-1x fa-inverse"></i> -->
-                        </span>
-                        </p>
-                    <h4 class="service-heading">Wedding Paket D</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan minimalis dan make up pengantin</br><b> Rp. 4.000.000.-</b></p>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="<?php echo base_url(); ?>assets/images/oke4-1.jpg" width="60%" height="90%"> 
+                        <p class="title">Wedding Paket C</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan , kontak amplop dan kursi tamu </br><b> Rp. 6.000.000.-</b></p>
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <span>
-                    <p>
-                    <img src="<?php echo base_url(); ?>assets/images/oke3.png"> 
-                       <!--  <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i> -->
-                    </p>
-                    </span>
-                    <h4 class="service-heading">Paket Fotografi</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan prewedding dan foto serta video shoot </br><b> Rp. 3.000.000.-</b></p>
+                 <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="<?php echo base_url(); ?>assets/images/oke1_1.jpg" width="60%" height="90%"> 
+                        <p class="title">Wedding Paket B</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk tenda , kursi tamu dan kipas angin </br><b> Rp. 8.000.000.-</b></p>
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <span>
-                        <p>
-                        <img src="<?php echo base_url(); ?>assets/images/oke6.png"> 
-                        <!-- <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i> -->
-                        </span>
-                         </p>
-                    <h4 class="service-heading">Paket Sewa Kipas Angin</h4>
-                    <p class="text-muted">Menyediakan paket pernikahan dalam bentuk pelayanan sewa kipas angin blower </br><b></b></p>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="<?php echo base_url(); ?>assets/images/oke6_1.jpg" width="60%" height="90%"> 
+                        <p class="title">Paket Sewa Kipas Angin</p>
+                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan sewa kipas angin dan blower </br><b> Rp. .-</b></p>
+                        <button class="btn btn-primary btn-block btn-sm">Lihat Paket</button>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Gedung Section -->
@@ -334,6 +318,8 @@
                         </li>
                         <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
                         </li>
+                        <li><a href="https://www.instagram.com/bundafitripali_makeup/"><i class="fa fa-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
                <!--   <div class="col-md-3">
@@ -375,6 +361,7 @@
                 </div> 
                 <div class="col-md-4">
                     <h4>METODE PEMBAYARAN</h4>
+                    <img src="<?php echo base_url(); ?>assets/images/bank.jpeg" width="60%" height="60%">
                 </div>
             </div>
         </div>
