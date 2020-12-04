@@ -104,85 +104,49 @@
 </style>
            
 	<div class="slideshow-container" align="center">
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 7</div>
+			<img src="<?php echo base_url(); ?>assets/images/fb13.jpg" style="width:70%">
+			<div class="text">TATA RIAS</div>
+		</div>
 
 		<div class="mySlides fade">
-			<div class="numbertext">1 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb2.jpg" style="width:70%">
+			<div class="numbertext">2 / 7</div>
+			<img src="<?php echo base_url(); ?>assets/images/fb14.jpg" style="width:70%">
+			<div class="text">HENNA</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 7</div>
+			<img src="<?php echo base_url(); ?>assets/images/fb17.jpg" style="width:70%">
+			<div class="text">BAJU PENGANTIN (ORANG TUA & MERTUA)</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 7</div>
+			<img src="<?php echo base_url(); ?>assets/images/fb15.jpg" style="width:70%">
 			<div class="text">DEKORASI PELAMINAN</div>
 		</div>
 		<div class="mySlides fade">
-			<div class="numbertext">2 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb1.jpg" style="width:70%">
-			<div class="text">DEKORASI AKAD</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">3 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb23.jpg" style="width:70%">
-			<div class="text">DEKORASI AKAD</div>
-		</div>
-
-		<div class="mySlides fade">
-			<div class="numbertext">4 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb3.jpg" style="width:70%">
-			<div class="text">TATA RIAS</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">5 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb4.jpg" style="width:70%">
+			<div class="numbertext">5 / 7</div>
+			<img src="<?php echo base_url(); ?>assets/images/fb16.jpg" style="width:70%">
 			<div class="text">DEKORASI KAMAR</div>
 		</div>
 		<div class="mySlides fade">
-			<div class="numbertext">6 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb5.jpg" style="width:70%">
-			<div class="text">KIPAS ANGIN</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">7 / 13</div>
+			<div class="numbertext">6 / 7</div>
 			<img src="<?php echo base_url(); ?>assets/images/fb6.jpg" style="width:70%">
 			<div class="text">KOTAK AMPLOP</div>
 		</div>
 		<div class="mySlides fade">
-			<div class="numbertext">8 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb7.jpg" style="width:70%">
-			<div class="text">KURSI TAMU</div>
+			<div class="numbertext">7 / 7</div>
+			<img src="<?php echo base_url(); ?>assets/images/fb5.jpg" style="width:70%">
+			<div class="text">KIPAS ANGIN</div>
 		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">9 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb8.jpg" style="width:70%">
-			<div class="text">HENNA</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">10 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb9.jpg" style="width:70%">
-			<div class="text">TENDA</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">11 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb10.jpg" style="width:70%">
-			<div class="text">FOTO & VIDEO</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">12 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb11.jpg" style="width:70%">
-			<div class="text">PREWEDDING</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">13 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb12.jpg" style="width:70%">
-			<div class="text">BAJU PENGANTIN</div>
-		</div>
-
+		
 
 	</div>
 <br>
 
 		<div style="text-align:center">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
 			<span class="dot"></span>
 			<span class="dot"></span>
 			<span class="dot"></span>
@@ -196,25 +160,23 @@
 		<a href="<?= base_url() . 'home'; ?>" class="btn btn-danger btn-lg"><b>BACK</b></a>
 		<a href="<?= base_url() . '#daftar'; ?>" class="btn btn-success btn-lg"><b>PESAN</b></a>
 	</div>
-<p align="center"><b>Paket A = Rp. 30.000.000.- </p></b>
+<p align="center"><b>Paket A = Rp. 15.000.000.- </p></b>
 
 		<div class="col-md-4 col-sm-12">
 			        <li>Tata Rias</li>
 			        <li>Henna</li>
-			        <li>Baju Pengantin (Orantua & Mertua)</li>
-			        <li>Dekorasi Pelaminan & Akad</li>
 		</div>
 
 		<div class="col-md-4 col-sm-12">
+				<li>Baju Pengantin (Orantua & Mertua)</li>
+			    <li>Dekorasi Pelaminan</li>
 				<li>Dekorasi Kamar</li>
-		        <li>Galeri Foto</li>
-		        <li>Tenda</li>
-		        <li>Kotak Amplop</li>
 		</div>
 		<div class="col-md-4 col-sm-12">
-				<li>Kursi Tamu</li>
+				
+				<li>Kotak Amplop</li>
 		        <li>Kipas Angin</li>
-		        <li>Fofografi</li>
+		        
 		</div>
 		<script>
 var slideIndex = 0;

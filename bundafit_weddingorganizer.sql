@@ -12,9 +12,9 @@ MySQL - 10.1.38-MariaDB : Database - weddingorganizer
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`weddingorganizer` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`bundafit_weddingorganizer` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `weddingorganizer`;
+USE `bundafit_weddingorganizer`;
 
 /*Table structure for table `dekorasi` */
 
@@ -91,17 +91,18 @@ CREATE TABLE `katering` (
   `jumlah` decimal(5,0) NOT NULL,
   `harga_katering` decimal(11,0) NOT NULL,
   PRIMARY KEY (`katering_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 /*Data for the table `katering` */
 
 insert  into `katering`(`katering_id`,`nama_katering`,`deskripsi`,`jumlah`,`harga_katering`) values 
-(1,'Wedding Package Complete','Dilengkapi dengan fasilitas full mulai dari tata rias, busana pengantin, dekorasi pelaminan, tenda, kursi, prewedding dan video shooting',1,30000000),
-(2,'Wedding Package A','Dilengkapi dengan fasilitas berupa tata rias, baju penggantin dan dekorasi pelaminan',1,15000000),
-(3,'Wedding Package B','Dilengkapi dengan fasilitas pernikahan berupa tenda dan kursi',1,8000000),
-(4,'Wedding Package C','Dilengkapi dengan dekorasi pelaminan mewah untuk pernikahan anda',1,6000000),
-(5,'Wedding Package D','Dilengkapi dengan dekorasi pelaminan yang minimalis untuk anda',1,4000000),
-(6,'Photography Package','Dilengkapi dengan fasilitas prewedding dan video shoot untuk anda',1,3000000);
+(1,'Wedding Paket Komplit','Dilengkapi Tata Rias, Henna, Baju Pengantin (Orant Tua & Mertua), Dekorasi Pelaminan & Akad, Dekorasi Kamar, Galeri Foto, Tenda, Kotak Amplop, Kursi Tamu, Kipas Angin dan Fotografi ',1,30000000),
+(2,'Wedding Paket A','Dilengkapi Tata Rias, Henna, Baju Penganti (Orang Tua & Mertua), Dekorasi Pelaminan, Dekorasi Kamar, Kotak Amplop dan Kipas Angin',1,15000000),
+(3,'Wedding Paket B','Dilengkapi Tenda, Kursi Tamu dan Kipas Angin',1,8000000),
+(4,'Wedding Paket C','Dilengkapi Dekorasi Pelaminan, Kotak Amplop dan Kusi Tamu',1,6000000),
+(5,'Wedding Paket D','Dilengkapi Pelaminan Minimalis dan Tata Rias',1,4000000),
+(6,'Paket Foto & Video','Dilengkapi Prewedding dan Video Shoot',1,3000000),
+(7,'Sewa Kipas Angin','Disewakan Kipas Angin Blower',4,200000);
 
 /*Table structure for table `konfirmasi` */
 

@@ -61,6 +61,12 @@ $route['logout'] = 'pelanggan/daftar/logout';
 
 $route['gedung']['get'] = 'pelanggan/gedung/index';
 $route['paketlengkap']['get'] = 'pelanggan/paketlengkap/index';
+$route['paketa']['get'] = 'pelanggan/paketa/index';
+$route['paketb']['get'] = 'pelanggan/paketb/index';
+$route['paketc']['get'] = 'pelanggan/paketc/index';
+$route['paketd']['get'] = 'pelanggan/paketd/index';
+$route['paketfoto']['get'] = 'pelanggan/paketfoto/index';
+$route['paketkipas']['get'] = 'pelanggan/paketkipas/index';
 
 // Login Handler
 $route['login']['get'] = 'pelanggan/login/index';
