@@ -74,6 +74,10 @@
       </div>
     </div>
     <div class="panel-footer">
+          <form class="" action="<?= base_url() . 'pelanggan/transaksi/delete/'. $detail->id_pemesanan ?>" method="post">
+          <button type="submit" class="btn btn-info">Batalkan Pesanan</button>
+        </form>
+    </div>
 
     </div>
   </div>

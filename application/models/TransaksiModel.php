@@ -102,6 +102,15 @@ class TransaksiModel extends CI_Model {
     return $query->row();
   }
 
+   public function deleteTransaksi($id)
+    {
+        $this->db->where('id_pemesanan',$id);
+        $this->db->delete('pemesanan');
+
+        $this->session->set_flashdata('success','Data berhasil dihapus!');
+        redirect(base_url() . 'admin/pemesanan/');
+    }
+
 }
 
 /* End of file ModelName.php */

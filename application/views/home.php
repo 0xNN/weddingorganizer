@@ -27,6 +27,7 @@
         max-width: 300px;
         margin: auto;
         text-align: center;
+        border-style: solid;
         }
 
         .title {

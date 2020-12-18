@@ -14,7 +14,7 @@ class PaketLengkap extends CI_Controller {
     public function index()
     {
     
-        //$this->load->view('templates/pelanggan/header'); // Untuk Menampilkan Header
+        $this->load->view('templates/pelanggan/header1'); // Untuk Menampilkan Header
         $this->load->view('pelanggan/paketlengkap/index'); 
         $this->load->view('templates/pelanggan/footer'); // Untuk Menampilkan Footer
 

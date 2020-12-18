@@ -20,10 +20,12 @@
         max-width: 500px;
         margin: auto;
         text-align: center;
+        background-color: white;
+        border-style: solid;
         }
 
         .title {
-        color: grey;
+        color: black;
         font-size: 18px;
         }
 
@@ -37,22 +39,23 @@
 		max-width: 1000px;
 		position: relative;
 		margin: auto;
+		background-color: white;
 		}
 
 		/* Caption text */
 		.text {
-		color: #f2f2f2;
+		color: #000000;
 		font-size: 15px;
 		padding: 8px 12px;
 		position: absolute;
-		bottom: 8px;
+		bottom: 50px;
 		width: 100%;
-		text-align: center;
+		text-align: left;
 		}
 
 		/* Number text (1/3 etc) */
 		.numbertext {
-		color: #f2f2f2;
+		color: #000000;
 		font-size: 12px;
 		padding: 8px 12px;
 		position: absolute;
@@ -64,14 +67,14 @@
 		height: 15px;
 		width: 15px;
 		margin: 0 2px;
-		background-color: #bbb;
+		background-color: #000000;
 		border-radius: 50%;
 		display: inline-block;
 		transition: background-color 0.6s ease;
 		}
 
 		.active {
-		background-color: #717171;
+		background-color: #ffffff;
 		}
 
 		/* Fading animation */
@@ -97,125 +100,130 @@
 		.text {font-size: 11px}
 		}
 
+		.container {
+		background-color: #eda1a1;
+
+		}
+		 body {
+		 	background-color: #white;
+		 }
+
 		 /*body {background:#f9f9f9 url(<?php echo base_url() . "assets/images/oke10.jpg"; ?>);background-size:cover;min-height:100vh;}
         .box {background:rgba(255,255,255,0.5);padding:20px;box-shadow: 1px 1px 7px 0px #555;border-radius:2px;}
         .heading-title {margin-bottom:20px;}
         .tagline {color:#fed136;font-size:20px;font-family:"Kaushan Script";}*/
 </style>
-           
-	<div class="slideshow-container" align="center">
+<div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card">
+                        <div></div>
+                        <div class="mySlides fade">
+                        	<div class="numbertext">1 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb2.jpg" style="width:70%">
+							<div class="text">DEKORASI PELAMINAN</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb1.jpg" style="width:70%">
+							<div class="text">DEKORASI AKAD</div>
+                    	</div>
+                    	<div class="mySlides fade">
+							<div class="numbertext">3 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb23.jpg" style="width:70%">
+							<div class="text">DEKORASI AKAD</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">4 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb3.jpg" style="width:70%">
+							<div class="text">TATA RIAS</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">5 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb4.jpg" style="width:70%">
+							<div class="text">DEKORASI KAMAR</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">6 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb5.jpg" style="width:70%">
+							<div class="text">KIPAS ANGIN</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">7 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb6.jpg" style="width:70%">
+							<div class="text">KOTAK AMPLOP</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">8 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb7.jpg" style="width:70%">
+							<div class="text">KURSI TAMU</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">9 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb8.jpg" style="width:70%">
+							<div class="text">HENNA</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">10 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb9.jpg" style="width:70%">
+							<div class="text">TENDA</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">11 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb10.jpg" style="width:70%">
+							<div class="text">FOTO & VIDEO</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">12 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb11.jpg" style="width:70%">
+							<div class="text">PREWEDDING</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">13 / 13</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb12.jpg" style="width:70%">
+							<div class="text">BAJU PENGANTIN</div>
+						</div>
 
-		<div class="mySlides fade">
-			<div class="numbertext">1 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb2.jpg" style="width:70%">
-			<div class="text">DEKORASI PELAMINAN</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">2 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb1.jpg" style="width:70%">
-			<div class="text">DEKORASI AKAD</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">3 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb23.jpg" style="width:70%">
-			<div class="text">DEKORASI AKAD</div>
-		</div>
-
-		<div class="mySlides fade">
-			<div class="numbertext">4 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb3.jpg" style="width:70%">
-			<div class="text">TATA RIAS</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">5 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb4.jpg" style="width:70%">
-			<div class="text">DEKORASI KAMAR</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">6 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb5.jpg" style="width:70%">
-			<div class="text">KIPAS ANGIN</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">7 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb6.jpg" style="width:70%">
-			<div class="text">KOTAK AMPLOP</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">8 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb7.jpg" style="width:70%">
-			<div class="text">KURSI TAMU</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">9 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb8.jpg" style="width:70%">
-			<div class="text">HENNA</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">10 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb9.jpg" style="width:70%">
-			<div class="text">TENDA</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">11 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb10.jpg" style="width:70%">
-			<div class="text">FOTO & VIDEO</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">12 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb11.jpg" style="width:70%">
-			<div class="text">PREWEDDING</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">13 / 13</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb12.jpg" style="width:70%">
-			<div class="text">BAJU PENGANTIN</div>
-		</div>
+                    	<br>
+                    	<div style="text-align:center">
+                        	<span class="dot"></span>
+                        	<span class="dot"></span>
+                        	<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+                    	</div>
+                    	<br>
+                        <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . '#dekorasi'; ?>" class="btn btn-lg"><b style="color: black">Galerry</b></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="card">
+                    	<p align="center"><b>PAKET LENGKAP = Rp. 30.000.000.- </p></b>
+                    	<ol align="left">
+	                       	<li>Tata Rias</li>
+					        <li>Henna</li>
+					        <li>Baju Pengantin (Orantua & Mertua)</li>
+					        <li>Dekorasi Pelaminan & Akad</li>
+					        <li>Dekorasi Kamar</li>
+					        <li>Galeri Foto</li>
+					        <li>Tenda</li>
+					        <li>Kotak Amplop</li>
+					        <li>Kursi Tamu</li>
+					        <li>Kipas Angin</li>
+					        <li>Fofografi</li>
+				  		</ol>
+                       <button class="btn btn-success btn-block btn-sm"><a href="<?= base_url() . '#daftar'; ?>" class="btn btn-lg"><b style="color: black">Pesan</b></a>
+                    </div>
+                </div>
 
 
-	</div>
-<br>
-
-		<div style="text-align:center">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-		</div>
-
-	<div class="col-lg-12 text-center">
-		<a href="<?= base_url() . 'home'; ?>" class="btn btn-danger btn-lg"><b>BACK</b></a>
-		<a href="<?= base_url() . '#daftar'; ?>" class="btn btn-success btn-lg"><b>PESAN</b></a>
-	</div>
-<p align="center"><b>Paket A = Rp. 30.000.000.- </p></b>
-
-		<div class="col-md-4 col-sm-12">
-			        <li>Tata Rias</li>
-			        <li>Henna</li>
-			        <li>Baju Pengantin (Orantua & Mertua)</li>
-			        <li>Dekorasi Pelaminan & Akad</li>
-		</div>
-
-		<div class="col-md-4 col-sm-12">
-				<li>Dekorasi Kamar</li>
-		        <li>Galeri Foto</li>
-		        <li>Tenda</li>
-		        <li>Kotak Amplop</li>
-		</div>
-		<div class="col-md-4 col-sm-12">
-				<li>Kursi Tamu</li>
-		        <li>Kipas Angin</li>
-		        <li>Fofografi</li>
-		</div>
 		<script>
 var slideIndex = 0;
 showSlides();

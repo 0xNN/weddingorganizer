@@ -79,6 +79,10 @@
           <button type="submit" class="btn btn-success">Set Active</button>
         </form>
       <?php endif; ?>
+      <br>
+       <form class="" action="<?= base_url() . 'admin/pemesanan/delete/'. $detail->id_pemesanan ?>" method="post">
+          <button type="submit" class="btn btn-info">Delete</button>
+        </form>
     </div>
   </div>
 </div>

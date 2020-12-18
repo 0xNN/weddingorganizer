@@ -14,10 +14,10 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand">Panel Pelanggan</a>
+                <a href="#" class="navbar-brand">Panel Konsumen</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?= base_url() . 'logout'; ?>">Keluar</a></li>
+                <li><a href="<?= base_url() . 'logout'; ?>">Kembali</a></li>
             </ul>
         </div>
     </nav>

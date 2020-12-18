@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-envelope"></i> Data Pemesanan</h4>
+            <h4 class="panel-title"><i class="fa fa-book"></i> Laporan Pemesanan</h4>
         </div>
         <div class="panel-body">
             <table class="table table-bordered table-striped table-hover">
@@ -29,9 +29,9 @@
                             <td><?= $pemesanan->nama ?></td>
                             <td><?= $pemesanan->status ?></td>
                             <td><?= $pemesanan->no_telp ?></td>
-                            <td width="10%">
+                           <!--  <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/pemesanan/detail/'.$pemesanan->id_pemesanan; ?>" class="btn btn-xs btn-info" title="Lihat"><i class="fa fa-eye fa-fw"></i></a>
-                            </td>
+                            </td> -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

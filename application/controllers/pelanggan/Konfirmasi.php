@@ -18,7 +18,7 @@ class Konfirmasi extends My_Controller {
     public function index()
     {
       $data['transaksi'] = $this->TransaksiModel->myTransaction();
-      print_r($data);
+      // print_r($data);
       $this->template('index',$data);
     }
 

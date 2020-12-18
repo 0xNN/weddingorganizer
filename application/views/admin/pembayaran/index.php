@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-diamond"></i> Data Pembayaran</h4>
+            <h4 class="panel-title"><i class="fa fa-file-o"></i> Data Pembayaran</h4>
         </div>
         <div class="panel-body">
             <table class="table table-bordered table-striped table-hover">

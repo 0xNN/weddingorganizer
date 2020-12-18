@@ -34,6 +34,15 @@ class Pemesanan extends Admin_Controller {
       redirect(base_url() . 'admin/pemesanan/');
     }
 
+    public function delete($id)
+    {
+        $this->db->where('id_pemesanan',$id);
+        $this->db->delete('pemesanan');
+
+        $this->session->set_flashdata('success','Data berhasil dihapus!');
+        redirect(base_url() . 'admin/pemesanan/');
+    }
+
     public function show($id)
     {
       $data['detail'] = $this->TransaksiModel->getDataById($id);
@@ -41,6 +50,7 @@ class Pemesanan extends Admin_Controller {
 
       $this->template('show_detail',$data);
     }
+
 
 }
 

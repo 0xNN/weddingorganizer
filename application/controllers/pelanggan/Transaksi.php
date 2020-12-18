@@ -64,6 +64,13 @@ class Transaksi extends My_Controller {
       $this->template('show_detail',$data);
     }
 
+    public function delete($id)
+    {
+      $data['detail'] = $this->TransaksiModel->deleteTransaksi($id);
+
+      $this->template('show_detail',$data);
+    }
+
 }
 
 /* End of file Controllername.php */

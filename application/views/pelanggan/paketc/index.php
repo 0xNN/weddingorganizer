@@ -14,16 +14,18 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
-   <style>
+    <style>
         .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 500px;
         margin: auto;
         text-align: center;
+        background-color: #060736;
+        border-style: double;
         }
 
         .title {
-        color: grey;
+        color: black;
         font-size: 18px;
         }
 
@@ -37,22 +39,23 @@
 		max-width: 1000px;
 		position: relative;
 		margin: auto;
+		background-color: white;
 		}
 
 		/* Caption text */
 		.text {
-		color: #f2f2f2;
+		color: #ffffff;
 		font-size: 15px;
 		padding: 8px 12px;
 		position: absolute;
-		bottom: 8px;
+		bottom: 50px;
 		width: 100%;
-		text-align: center;
+		text-align: left;
 		}
 
 		/* Number text (1/3 etc) */
 		.numbertext {
-		color: #f2f2f2;
+		color: #ffffff;
 		font-size: 12px;
 		padding: 8px 12px;
 		position: absolute;
@@ -64,14 +67,14 @@
 		height: 15px;
 		width: 15px;
 		margin: 0 2px;
-		background-color: #bbb;
+		background-color: red;
 		border-radius: 50%;
 		display: inline-block;
 		transition: background-color 0.6s ease;
 		}
 
 		.active {
-		background-color: #717171;
+		background-color: #ffffff;
 		}
 
 		/* Fading animation */
@@ -97,56 +100,67 @@
 		.text {font-size: 11px}
 		}
 
+		.container {
+		background-color: #94ebff;
+
+		}
+		 body {
+		 	background-color: #white;
+		 }
+
 		 /*body {background:#f9f9f9 url(<?php echo base_url() . "assets/images/oke10.jpg"; ?>);background-size:cover;min-height:100vh;}
         .box {background:rgba(255,255,255,0.5);padding:20px;box-shadow: 1px 1px 7px 0px #555;border-radius:2px;}
         .heading-title {margin-bottom:20px;}
         .tagline {color:#fed136;font-size:20px;font-family:"Kaushan Script";}*/
 </style>
+	<div class="row">
+                <div class="col-md-6 col-sm-12">
+				    <div class="card">
+				        <div class="mySlides fade">
+							<div class="numbertext">1 / 4</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb21.jpg" style="width:70%">
+							<div class="text">DEKORASI PELAMINAN</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 4</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb22.jpg" style="width:70%">
+							<div class="text">DEKORASI PELAMINAN</div>
+						</div>
+							<div class="mySlides fade">
+							<div class="numbertext">3 / 4</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb7.jpg" style="width:70%">
+							<div class="text">KURSI TAMU</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">4 / 4</div>
+							<img src="<?php echo base_url(); ?>assets/images/fb6.jpg" style="width:70%">
+							<div class="text">KOTAK AMPLOP</div>
+						</div>	
+						<br>
+						<div style="text-align:center">
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+						</div>
+						<br>
+						<button class="btn btn-default btn-block btn-sm"><a href="<?= base_url() . '#dekorasi'; ?>" class="btn btn-lg"><b style="color: black">Galerry</b></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="card">
+                    <p align="center" style="color:white"><b>Paket C = Rp. 6.000.000.- </p></b>
+                    <ol align="left" style="color:white">
+                    	<li>Dekorasi Pelaminan</li>
+                    	<li>Kotak Amplop</li>
+                    	<li>Kursi Tamu</li>
+                    </ol>
+                    <button class="btn btn-default btn-block btn-sm"><a href="<?= base_url() . '#daftar'; ?>" class="btn btn-lg"><b style="color: black">Pesan</a></b>
+                    </div>
+                </div>
+		</div>
            
-	<div class="slideshow-container" align="center">
-		<div class="mySlides fade">
-			<div class="numbertext">4 / 4</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb21.jpg" style="width:70%">
-			<div class="text">DEKORASI PELAMINAN</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">5 / 5</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb22.jpg" style="width:70%">
-			<div class="text">DEKORASI PELAMINAN</div>
-		</div>
-			<div class="mySlides fade">
-			<div class="numbertext">5 / 5</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb7.jpg" style="width:70%">
-			<div class="text">KURSI TAMU</div>
-		</div>
-		<div class="mySlides fade">
-			<div class="numbertext">6 / 6</div>
-			<img src="<?php echo base_url(); ?>assets/images/fb6.jpg" style="width:70%">
-			<div class="text">KOTAK AMPLOP</div>
-		</div>	
-
-	</div>
-<br>
-
-		<div style="text-align:center">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-		</div>
-
-	<div class="col-lg-12 text-center">
-		<a href="<?= base_url() . 'home'; ?>" class="btn btn-danger btn-lg"><b>BACK</b></a>
-		<a href="<?= base_url() . '#daftar'; ?>" class="btn btn-success btn-lg"><b>PESAN</b></a>
-	</div>
-<p align="center"><b>Paket C = Rp. 6.000.000.- </p></b>
-
-		<div class="col-md-6 col-sm-12">
-			<li>Dekorasi Pelaminan Minimalis</li>
-		</div>
-		<div class="col-md-6 col-sm-12">
-			    <li>Tata Rias</li>
-		</div>
+	
 		<script>
 var slideIndex = 0;
 showSlides();
