@@ -58,9 +58,7 @@ class Transaksi extends My_Controller {
     {
       // echo $id;
       $data['detail'] = $this->TransaksiModel->getDataById($id);
-
-      // var_dump($data);
-
+      
       $this->template('show_detail',$data);
     }
 

@@ -20,14 +20,102 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <style>
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
+        #myImg:hover {opacity: 0.7;}
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content, #caption {  
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)} 
+            to {-webkit-transform:scale(1)}
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
     <style>
         .card {
+        border-radius: 6px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 300px;
+        /* max-width: 300px; */
         margin: auto;
         text-align: center;
-        border-style: solid;
+        border-style: groove;
+        margin-bottom: 20px;
         }
 
         .title {
@@ -37,6 +125,15 @@
 
         button:hover, a:hover {
         opacity: 0.7;
+        }
+
+        .navbar-fixed-top.scrolled {
+            background-color: #222222 !important;
+            transition: background-color 200ms linear;
+        }
+        img {
+            width: 150px;
+            height: 180px;
         }
 
     </style>
@@ -55,7 +152,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Bunda Fitry Wedding Organizer</a>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">Bunda Fitry Wedding Organizer</a> -->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,7 +178,7 @@
                         <a class="page-scroll" href="#dekorasi">Dekorasi</a>
                     </li>
                     <li>
-                        <a href="<?= base_url() . 'gedung'; ?>">Tentang Kami</a>
+                        <a href="<?= base_url() . 'tentang'; ?>">Tentang Kami</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#daftar">Daftar</a>
@@ -114,63 +211,127 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4 col-sm-12">
-                    <div class="card">
-                        <div></div>
-                        <img src="<?php echo base_url(); ?>assets/images/oke7_1.jpg" width="60%" height="60%">
-                        <p class="title">Wedding Paket Lengkap</p>
-                        <p>Menyediakan paket pernikahan lengkap dari mulai make up, baju pengantin, dekorasi pelaminan, dekorasi kamar, kontak amplop, kipas angin sampai urusan prewedding, video dan foto  </br><b> Rp. 30.000.000.-</b></p>
-                        <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketlengkap'; ?>">Lihat Paket</button></a>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-list-alt"></i> DAFTAR PAKET</h4>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke2_1.jpg" width="60%" height="70%"> 
-                        <p class="title">Wedding Paket A</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan Make Up, Baju pengantin (Ortu & Mertua), henna, dekorasi pelaminan, dekorasi kamar, kontak amplop, dan kipas angin </br><b> Rp. 15.000.000.-</b></p> 
-                       <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketa'; ?>">Lihat Paket</button></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke3-1.jpg" width="60%" height="90%"> 
-                        <p class="title">Paket Fotografi</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan prewedding serta video shoot </br><b> Rp. 3.000.000.-</b></p>
-                        <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketfoto'; ?>">Lihat Paket</button></a>
+                    <div class="panel-body">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4 class="title"><?= $paketLengkap[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="<?php echo base_url(); ?>assets/images/oke7_1.jpg" width="60%" height="60%">
+                                    <p><?= (strlen($paketLengkap[0]->keterangan_paket) > 80 ? substr($paketLengkap[0]->keterangan_paket,0,80).'...' : $paketLengkap[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketLengkap[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketlengkap'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4 class="title"><?= $paketA[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="<?php echo base_url(); ?>assets/images/oke2_1.jpg" width="60%" height="70%">
+                                    <p><?= (strlen($paketA[0]->keterangan_paket) > 80 ? substr($paketA[0]->keterangan_paket,0,80).'...' : $paketA[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketA[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketa'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4 class="title"><?= $paketFoto[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="<?php echo base_url(); ?>assets/images/oke3-1.jpg" width="60%" height="70%">
+                                    <p><?= (strlen($paketFoto[0]->keterangan_paket) > 80 ? substr($paketFoto[0]->keterangan_paket,0,80).'...' : $paketFoto[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketFoto[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketfoto'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke5_1.jpg" width="60%" height="90%"> 
-                        <p class="title">Wedding Paket D</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan minimalis dan make up penggantin</br><b> Rp. 4.000.000.-</b></p>
-                       <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketd'; ?>">Lihat Paket</button></a>
+            <div class="row text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h4 class="panel-title"><i class="fa fa-list-alt"></i> DAFTAR PAKET</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke4-1.jpg" width="60%" height="90%"> 
-                        <p class="title">Wedding Paket C</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan dekorasi pelaminan , kontak amplop dan kursi tamu </br><b> Rp. 6.000.000.-</b></p>
-                       <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketc'; ?>">Lihat Paket</button></a>
-                    </div>
-                </div>
-                 <div class="col-md-3 col-sm-12">
-                    <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke1_1.jpg" width="60%" height="90%"> 
-                        <p class="title">Wedding Paket B</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk tenda , kursi tamu dan kipas angin </br><b> Rp. 8.000.000.-</b></p>
-                        <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketb'; ?>">Lihat Paket</button></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="card">
-                        <img src="<?php echo base_url(); ?>assets/images/oke6_1.jpg" width="60%" height="90%"> 
-                        <p class="title">Paket Sewa Kipas Angin</p>
-                        <p>Menyediakan paket pernikahan dalam bentuk pelayanan sewa kipas angin dan blower </br><b> Rp. .-</b></p>
-                        <button class="btn btn-info btn-block btn-sm"><a href="<?= base_url() . 'paketkipas'; ?>">Lihat Paket</button></a>
+                    <div class="panel-body">
+                        <div class="col-md-3 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4 class="title"><?= $paketD[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">                                    
+                                    <img src="<?php echo base_url(); ?>assets/images/oke5_1.jpg" width="60%" height="90%">
+                                    <p><?= (strlen($paketD[0]->keterangan_paket) > 40 ? substr($paketD[0]->keterangan_paket,0,40).'...' : $paketD[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketD[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketd'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-title">                                        
+                                        <h4 class="title"><?= $paketC[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="<?php echo base_url(); ?>assets/images/oke4-1.jpg" width="60%" height="90%">
+                                    <p><?= (strlen($paketC[0]->keterangan_paket) > 40 ? substr($paketC[0]->keterangan_paket,0,40).'...' : $paketC[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketC[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketc'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4 class="title"><?= $paketB[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="<?php echo base_url(); ?>assets/images/oke1_1.jpg" width="60%" height="90%">
+                                    <p><?= (strlen($paketB[0]->keterangan_paket) > 40 ? substr($paketB[0]->keterangan_paket,0,40).'...' : $paketB[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketB[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketb'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="panel-tut">
+                                        <h4 class="title"><?= $paketKipas[0]->nama_paket ?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="<?php echo base_url(); ?>assets/images/oke6_1.jpg" width="60%" height="90%">
+                                    <p><?= (strlen($paketKipas[0]->keterangan_paket) > 40 ? substr($paketKipas[0]->keterangan_paket,0,40).'...' : $paketKipas[0]->keterangan_paket) ?></p>
+                                    <p><b>RP. <?= number_format($paketKipas[0]->harga_paket,0) ?></b></p>
+                                    <a class="btn btn-success btn-block" href="<?= base_url() . 'paketkipas'; ?>">Lihat Paket</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,7 +362,7 @@
                     }
                 ?>
             </div>
-        </div> 
+        </div>
     </section> -->
     <!-- Rias Section -->
     <section id="rias">
@@ -257,7 +418,7 @@
                     }
                 ?>
             </div>
-        </div> 
+        </div>
     </section>
     <!-- Contact Section -->
     <section id="daftar">
@@ -359,7 +520,7 @@
                         <p align="left"><i class="fa fa-envelope"> Email   : </i> bundafitrypali@gmail.com </p>
                         <p align="left"><i class="fa fa-phone"> Telp   : </i> (+6281367967760) </p>
                         <p align="left"><i class="fa fa-map-marker"> Alamat : </i> Jl.Taman Siswa Kel. Talang Ubi selatan, Kec. Talang Ubi Pendopo, Kabupaten Penukal Abab Lematang Ilir </p>
-                </div> 
+                </div>
                 <div class="col-md-4">
                     <h4>METODE PEMBAYARAN</h4>
                     <img src="<?php echo base_url(); ?>assets/images/bank.jpeg" width="60%" height="60%">
@@ -370,6 +531,16 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var nav = $(".navbar-fixed-top");
+                console.log(nav);
+                nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
+            });
+        });
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
@@ -383,6 +554,33 @@
     <!-- Theme JavaScript -->
     <script src="assets/js/agency.min.js"></script>
 
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        Array.from(document.querySelectorAll("#myImg")).forEach(item => {
+            item.addEventListener("click", event => {
+                modal.style.display = "block";
+                modalImg.src = event.target.src;
+                captionText.innerHTML = event.target.alt;
+            });
+        });
+
+        // Get the <span> element that closes the modal
+        document.querySelector(".close").addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

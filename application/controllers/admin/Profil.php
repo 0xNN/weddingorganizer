@@ -6,7 +6,7 @@ class Profil extends Admin_Controller {
     public function __construct()
     {
         parent::__construct();
-        $config['upload_path'] = './uploads/';
+        $config['upload_path'] = './assets/images/';
         $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max-size'] = 10240;
 
@@ -31,12 +31,9 @@ class Profil extends Admin_Controller {
     private function validation() {
         $this->form_validation->set_rules('nama_perusahaan','Nama Perusahaan','required');
         $this->form_validation->set_rules('pemilik','Nama Pemilik','required');
-        $this->form_validation->set_rules('no_tlp','Nomer Telepon','required');
+        $this->form_validation->set_rules('no_telp','Nomer Telepon','required');
         $this->form_validation->set_rules('email','Email','required');
         $this->form_validation->set_rules('alamat','Alamat','required');
-        $this->form_validation->set_rules('sejarah','Sejarah Perusahaan','required');
-        $this->form_validation->set_rules('visi','Visi Perusahaan','required');
-        $this->form_validation->set_rules('misi','Misi Perusahaan','required');
     }
 
     public function create()
@@ -61,12 +58,9 @@ class Profil extends Admin_Controller {
             $data = array(
                 'nama_perusahaan' => $this->input->post('nama_perusahaan'),
                 'pemilik' => $this->input->post('pemilik'),
-                'no_tlp' => $this->input->post('no_tlp'),
+                'no_telp' => $this->input->post('no_telp'),
                 'email' => $this->input->post('email'),
-                'alamat' => $this->input->post('alamat'),
-                'sejarah' => $this->input->post('sejarah'),
-                'visi' => $this->input->post('visi'),
-                'misi' => $this->input->post('misi')
+                'alamat' => $this->input->post('alamat')
             );
 
             // UPLOAD IMAGE
@@ -114,12 +108,9 @@ class Profil extends Admin_Controller {
             $data = array(
                 'nama_perusahaan' => $this->input->post('nama_perusahaan'),
                 'pemilik' => $this->input->post('pemilik'),
-                'no_tlp' => $this->input->post('no_tlp'),
+                'no_telp' => $this->input->post('no_telp'),
                 'email' => $this->input->post('email'),
-                'alamat' => $this->input->post('alamat'),
-                'sejarah' => $this->input->post('sejarah'),
-                'visi' => $this->input->post('visi'),
-                'misi' => $this->input->post('misi')
+                'alamat' => $this->input->post('alamat')
             );
 
             if ($this->input->post('struktur_organisasi') != null) {
@@ -144,7 +135,7 @@ class Profil extends Admin_Controller {
 
         // DELETING IMAGE
         if ($data->struktur_organisasi != '') {
-          unlink('uploads/' . $data->struktur_organisasi);
+            unlink('assets/images/' . $data->struktur_organisasi);
         }
 
         $this->db->delete('profil',['profil_id' => $id]);

@@ -13,10 +13,10 @@ class PaketKipas extends CI_Controller {
 
     public function index()
     {
-    
-        $this->load->view('templates/pelanggan/header1'); // Untuk Menampilkan Header
-        $this->load->view('pelanggan/paketkipas/index'); 
-        $this->load->view('templates/pelanggan/footer'); // Untuk Menampilkan Footer
+        $data['paketkipas'] = $this->PaketKipasModel->getAll();
+        $this->load->view('templates/pelanggan/paket/header'); // Untuk Menampilkan Header
+        $this->load->view('pelanggan/paketkipas/index',$data); 
+        $this->load->view('templates/pelanggan/paket/footer'); // Untuk Menampilkan Footer
 
     }
 

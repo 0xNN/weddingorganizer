@@ -39,7 +39,7 @@
           </div>
           <div style="width:100%;text-align:right;">
               <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-send"></span> Kirim</button>
-              <a href="<?php echo base_url() . 'admin/katering'; ?>" class="btn btn-default">Batal</a>
+              <a href="<?php echo base_url() . 'admin/paket'; ?>" class="btn btn-default">Batal</a>
           </div>
 
         </form>

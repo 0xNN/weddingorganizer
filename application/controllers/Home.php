@@ -7,16 +7,23 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 
-        // Tambahkan ini dari GedungModel.php
 		$this->load->model('GedungModel');	
 		$this->load->model('RiasModel');
 		$this->load->model('DekorasiModel');
+		$this->load->model('DashboardModel');
 	}
 	public function index()
 	{
 		$result['dataGedung'] = $this->GedungModel->getAll();
 		$result['dataRias'] = $this->RiasModel->getAll();
 		$result['dataDekorasi'] = $this->DekorasiModel->getAll();
+		$result['paketLengkap'] = $this->DashboardModel->paketLengkap();
+		$result['paketA'] = $this->DashboardModel->paketA();
+		$result['paketB'] = $this->DashboardModel->paketB();
+		$result['paketC'] = $this->DashboardModel->paketC();
+		$result['paketD'] = $this->DashboardModel->paketD();
+		$result['paketFoto'] = $this->DashboardModel->paketFoto();
+		$result['paketKipas'] = $this->DashboardModel->paketKipas();
 
 		$this->load->view('home', $result);
 	}

@@ -60,6 +60,7 @@ $route['daftar'] = 'pelanggan/daftar/store';
 $route['logout'] = 'pelanggan/daftar/logout';
 
 $route['gedung']['get'] = 'pelanggan/gedung/index';
+$route['tentang']['get'] = 'pelanggan/tentang/index';
 $route['paketlengkap']['get'] = 'pelanggan/paketlengkap/index';
 $route['paketa']['get'] = 'pelanggan/paketa/index';
 $route['paketb']['get'] = 'pelanggan/paketb/index';

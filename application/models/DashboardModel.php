@@ -59,6 +59,82 @@ class DashboardModel extends CI_Model {
     return $query->result();
   }
 
+  public function dataLaporanTahunan($tahun) {
+    $query = $this->db->select("*")
+      ->from('pemesanan')
+      ->where('tgl_acaran',$tahun)
+      ->get();
+
+    return $query->result();
+  }
+
+  public function paketLengkap()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',1)
+                      ->get();
+
+    return $query->result();
+  }
+
+  public function paketA()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',2)
+                      ->get();
+
+    return $query->result();
+  }
+
+  public function paketB()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',3)
+                      ->get();
+
+    return $query->result();
+  }
+
+  public function paketC()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',4)
+                      ->get();
+
+    return $query->result();
+  }
+  public function paketD()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',5)
+                      ->get();
+
+    return $query->result();
+  }
+  public function paketFoto()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',6)
+                      ->get();
+
+    return $query->result();
+  }
+
+  public function paketKipas()
+  {
+    $query = $this->db->select('*')
+                      ->from('paket')
+                      ->where('id_paket',7)
+                      ->get();
+
+    return $query->result();
+  }
 }
 
 

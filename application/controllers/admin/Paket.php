@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Katering extends Admin_Controller {
+class Paket extends Admin_Controller {
 
     public function index()
     {
-        $data['caterings'] = $this->db->get('katering');
+        $data['paket'] = $this->db->get('paket');
 
         $this->template('index',$data);
     }
@@ -14,15 +14,14 @@ class Katering extends Admin_Controller {
     {
         $this->load->view('templates/admin/header');
         $this->load->view('templates/admin/sidemenu');
-        $this->load->view('admin/katering/'.$template,$data);
+        $this->load->view('admin/paket/'.$template,$data);
         $this->load->view('templates/admin/footer');
     }
 
     private function validation() {
-        $this->form_validation->set_rules('nama_katering','Nama katering','required');
-        $this->form_validation->set_rules('deskripsi','Deskripsi','required');
-        $this->form_validation->set_rules('jumlah','Jumlah','required|numeric');
-        $this->form_validation->set_rules('harga_katering','Harga','required|numeric');
+        $this->form_validation->set_rules('nama_paket','Nama paket','required');
+        $this->form_validation->set_rules('keterangan_paket','Keterangan','required');
+        $this->form_validation->set_rules('harga_paket','Harga','required|numeric');
     }
 
     public function create()
@@ -39,18 +38,17 @@ class Katering extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_katering' => $this->input->post('nama_katering'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'jumlah' => $this->input->post('jumlah'),
-                'harga_katering' => $this->input->post('harga_katering')
+                'nama_paket' => $this->input->post('nama_paket'),
+                'keterangan_paket' => $this->input->post('keterangan_paket'),
+                'harga_paket' => $this->input->post('harga_paket')
             );
 
             // INSERT INTO DATABASE
-            $this->db->insert('katering',$data);
+            $this->db->insert('paket',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil disimpan!');
-            redirect(base_url() . 'admin/katering/');
+            redirect(base_url() . 'admin/paket/');
         }
     }
 
@@ -58,12 +56,12 @@ class Katering extends Admin_Controller {
     {
         // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
-            redirect(base_url() . 'admin/katering');
+            redirect(base_url() . 'admin/paket');
         }
 
         // mengambil data dari table user berdasarkan id
-        $result = $this->db->get_where('katering',['katering_id' => $id]);
-        $data['katering'] = $result->row();
+        $result = $this->db->get_where('paket',['id_paket' => $id]);
+        $data['paket'] = $result->row();
         $this->template('edit',$data);
     }
 
@@ -76,29 +74,28 @@ class Katering extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_katering' => $this->input->post('nama_katering'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'jumlah' => $this->input->post('jumlah'),
-                'harga_katering' => $this->input->post('harga_katering')
+                'nama_paket' => $this->input->post('nama_paket'),
+                'keterangan_paket' => $this->input->post('keterangan_paket'),
+                'harga_paket' => $this->input->post('harga_paket')
             );
 
             // INSERT INTO DATABASE
-            $this->db->where('katering_id',$id);
-            $this->db->update('katering',$data);
+            $this->db->where('id_paket',$id);
+            $this->db->update('paket',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil diperbarui!');
-            redirect(base_url() . 'admin/katering/');
+            redirect(base_url() . 'admin/paket/');
         }
     }
 
     public function delete($id)
     {
-        $this->db->where('katering_id',$id);
-        $this->db->delete('katering');
+        $this->db->where('id_paket',$id);
+        $this->db->delete('paket');
 
         $this->session->set_flashdata('success','Data berhasil dihapus!');
-        redirect(base_url() . 'admin/katering/');
+        redirect(base_url() . 'admin/paket/');
     }
 }
 

@@ -31,12 +31,17 @@
                               a.n <?= $pembayaran->pemilik ?>
                             </td>
                             <td>
-                              <img src="<?= base_url() . 'uploads/'.$pembayaran->foto ?>" alt="" width="200">
+                              <img id="myImg" src="<?= base_url() . 'uploads/'.$pembayaran->foto ?>" alt="Bukti Bayar" width="200">
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
         </div>
     </div>
 </div>

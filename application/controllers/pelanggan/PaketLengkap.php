@@ -6,17 +6,15 @@ class PaketLengkap extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-
-        
         $this->load->model('PaketLengkapModel');
     }
 
     public function index()
     {
-    
-        $this->load->view('templates/pelanggan/header1'); // Untuk Menampilkan Header
-        $this->load->view('pelanggan/paketlengkap/index'); 
-        $this->load->view('templates/pelanggan/footer'); // Untuk Menampilkan Footer
+        $data['paketlengkap'] = $this->PaketLengkapModel->getAll();
+        $this->load->view('templates/pelanggan/paket/header'); // Untuk Menampilkan Header
+        $this->load->view('pelanggan/paketlengkap/index',$data); 
+        $this->load->view('templates/pelanggan/paket/footer'); // Untuk Menampilkan Footer
 
     }
 

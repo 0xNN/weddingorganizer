@@ -1,7 +1,7 @@
 <div class="col-sm-9">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-book"></i> Edit Dekorasi : <?php echo $dekorasi->nama_dekorasi; ?></h4>
+            <h4 class="panel-title"><i class="fa fa-book"></i> Edit Profil : <?php echo $profil->nama_perusahaan; ?></h4>
         </div>
         <div class="panel-body">
             <form action="<?php  echo base_url() . 'admin/profil/update/'.$profil->profil_id; ?>" class="form-horizontal" method="post" enctype="multipart/form-data">

@@ -22,61 +22,39 @@
         </dl>
       </div>
       <div class="col-sm-12">
-        <table class="table table-bordered table-condensed table-responsive">
-          <thead>
+        <table class="table table-sm table-bordered table-responsive">
+          <thead class="bg-success">
             <tr>
               <th>No</th>
-              <th>Jenis Pesanan</th>
-              <th>Nama</th>
+              <th>Paket</th>
+              <th>List</th>
               <th>Harga</th>
             </tr>
           </thead>
           <tbody>
-         <!--    <tr>
-              <td>1</td>
-              <td> Sewa Gedung</td>
-              <td><?= $detail->nama_gedung ?></td>
-              <td>Rp <?= number_format($detail->harga_gedung,0,',','.') ?></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td> Sewa Dekorasi</td>
-              <td><?= $detail->nama_dekorasi ?></td>
-              <td>Rp <?= number_format($detail->harga_dekorasi,0,',','.') ?></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td> Sewa Rias</td>
-              <td><?= $detail->nama_rias ?></td>
-              <td>Rp <?= number_format($detail->harga_rias,0,',','.') ?></td>
-            </tr> -->
             <tr>
               <td>1</td>
-              <td> Pilihan Paket</td>
-              <td><?= $detail->nama_katering ?></td>
-              <td>Rp <?= number_format($detail->harga_katering,0,',','.') ?></td>
+              <td><?= $detail->nama_paket ?></td>
+              <td><?= $detail->keterangan_paket ?></td>
+              <td>Rp <?= number_format($detail->harga_paket,0,',','.') ?></td>
             </tr>
-          <!--   <tr>
-              <td>5</td>
-              <td> Sewa Dokumentasi</td>
-              <td><?= $detail->nama_dokumentasi ?></td>
-              <td>Rp <?= number_format($detail->harga_dokumentasi,0,',','.') ?></td>
-            </tr> -->
             <tr>
-              <th colspan="3">Total</th>
+              <th colspan="3"><b>Total</b></th>
               <?php
-                $total = $detail->harga_gedung + $detail->harga_dekorasi + $detail->harga_katering + $detail->harga_rias + $detail->harga_dokumentasi;
+                $total = $detail->harga_paket;
               ?>
-              <td>Rp <?= number_format($total,0,',','.') ?></td>
+              <td><b>Rp <?= number_format($total,0,',','.') ?></b></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="panel-footer">
-          <form class="" action="<?= base_url() . 'pelanggan/transaksi/delete/'. $detail->id_pemesanan ?>" method="post">
-          <button type="submit" class="btn btn-info">Batalkan Pesanan</button>
-        </form>
+      <?php if($detail->status == "pending"): ?>
+      <form class="" action="<?= base_url() . 'pelanggan/transaksi/delete/'. $detail->id_pemesanan ?>" method="post">
+        <button type="submit" onclick="return confirm('Anda yakin ingin membatalkan pesanan ini ?')" class="btn btn-info">Batalkan Pesanan</button>
+      </form>
+      <?php endif; ?>
     </div>
 
     </div>

@@ -1,12 +1,12 @@
 <div class="form-group">
-    <label for="nama_profil" class="control-label col-sm-3"> Nama Perusahaan </label>
+    <label for="nama_perusahaan" class="control-label col-sm-3"> Nama Perusahaan </label>
     <div class="col-sm-6">
-        <input type="text" name="nama_profil" value="<?php echo set_value('nama_perusahaan',isset($profil->nama_perusahaan) ? $profil->nama_profil : ''); ?>" class="form-control">
+        <input type="text" name="nama_perusahaan" value="<?php echo set_value('nama_perusahaan',isset($profil->nama_perusahaan) ? $profil->nama_perusahaan : ''); ?>" class="form-control">
         <?php echo form_error('nama_profil'); ?>
     </div>
 </div>
 <div class="form-group">
-    <label for="harga_profil" class="control-label col-sm-3"> Pemilik </label>
+    <label for="pemilik" class="control-label col-sm-3"> Pemilik </label>
     <div class="col-sm-4">
         <input type="text" name="pemilik" value="<?php echo set_value('pemilik',isset($profil->pemilik) ? $profil->pemilik : ''); ?>" class="form-control">
         <?php echo form_error('pemilik'); ?>
@@ -15,14 +15,14 @@
 <div class="form-group">
     <label for="no_telp" class="control-label col-sm-3"> No Telepon </label>
     <div class="col-sm-4">
-        <textarea name="no_telp" class="form-control"><?php echo set_value('no_telp',isset($profil->no_telp) ? $profil->no_telp : ''); ?></textarea>
+        <input type="text" name="no_telp" value="<?php echo set_value('no_telp',isset($profil->no_telp) ? $profil->no_telp : ''); ?>" class="form-control">
         <?php echo form_error('no_telp'); ?>
     </div>
 </div>
 <div class="form-group">
     <label for="email" class="control-label col-sm-3"> Email </label>
     <div class="col-sm-4">
-        <textarea name="email" class="form-control"><?php echo set_value('email',isset($profil->email) ? $profil->email : ''); ?></textarea>
+        <input type="email" name="email" value="<?php echo set_value('email',isset($profil->email) ? $profil->email : ''); ?>" class="form-control">
         <?php echo form_error('email'); ?>
     </div>
 </div>
@@ -34,28 +34,7 @@
     </div>
 </div>
 <div class="form-group">
-    <label for="sejarah" class="control-label col-sm-3"> Sejarah </label>
-    <div class="col-sm-4">
-        <textarea name="sejarah" class="form-control"><?php echo set_value('sejarah',isset($profil->sejarah) ? $profil->sejarah : ''); ?></textarea>
-        <?php echo form_error('sejarah'); ?>
-    </div>
-</div>
-<div class="form-group">
-    <label for="visi" class="control-label col-sm-3"> Visi </label>
-    <div class="col-sm-4">
-        <textarea name="visi" class="form-control"><?php echo set_value('visi',isset($profil->visi) ? $profil->visi : ''); ?></textarea>
-        <?php echo form_error('visi'); ?>
-    </div>
-</div>
-<div class="form-group">
-    <label for="misi" class="control-label col-sm-3"> Misi </label>
-    <div class="col-sm-4">
-        <textarea name="misi" class="form-control"><?php echo set_value('misi',isset($profil->misi) ? $profil->misi : ''); ?></textarea>
-        <?php echo form_error('misi'); ?>
-    </div>
-</div>
-<div class="form-group">
-    <label for="struktur_organisasi" class="control-label col-sm-3">  </label>
+    <label for="struktur_organisasi" class="control-label col-sm-3"> Struktur Organisasi </label>
     <div class="col-sm-4">
         <input type="file" name="struktur_organisasi" value="">
         <?php echo form_error('struktur_organisasi'); ?>

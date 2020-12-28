@@ -11,31 +11,29 @@
         </div>
         <div class="panel-body">
             <div class="tool-box">
-                <a href="<?php echo base_url() . 'admin/katering/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah Paket</a>
+                <a href="<?php echo base_url() . 'admin/paket/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah Paket</a>
             </div>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Jenis</th>
-                        <th>Jumlah</th>
                         <th>Harga</th>
-                        <th>Deskripsi</th>
+                        <th>Keterangan</th>
                         <th>Tools</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $no=1; ?>
-                    <?php foreach($caterings->result() as $katering): ?>
+                    <?php foreach($paket->result() as $paket): ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $katering->nama_katering ?></td>
-                            <td><?= $katering->jumlah ?></td>
-                            <td width="110px">Rp <?= number_format($katering->harga_katering,0) ?></td>
-                            <td><?= $katering->deskripsi ?></td>
+                            <td><?= $paket->nama_paket ?></td>
+                            <td width="110px">Rp <?= number_format($paket->harga_paket,0) ?></td>
+                            <td><?= $paket->keterangan_paket ?></td>
                             <td width="10%">
-                                <a href="<?php echo base_url() . 'admin/katering/edit/'.$katering->katering_id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/katering/delete/'.$katering->katering_id; ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/paket/edit/'.$paket->id_paket; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/paket/delete/'.$paket->id_paket; ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
