@@ -10,9 +10,9 @@
             <h4 class="panel-title"><i class="fa fa-book"></i> Data Profil</h4>
         </div>
         <div class="panel-body">
-            <div class="tool-box">
+           <!--  <div class="tool-box">
                 <a href="<?php echo base_url() . 'admin/profil/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah Profil</a>
-            </div>
+            </div> -->
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
@@ -21,9 +21,9 @@
                         <th>Telp</th>
                         <th>Email</th>
                         <th>Alamat</th>
-                        <th>Sejarah</th>
+                       <!--  <th>Sejarah</th>
                         <th>Visi</th>
-                        <th>Misi</th>
+                        <th>Misi</th> -->
                         <th>Struktur Organisasi</th>
                         <th>Tools</th>
                     </tr>
@@ -37,9 +37,9 @@
                             <td><?= $profil->no_tlp ?></td>
                             <td><?= $profil->email ?></td>
                             <td><?= $profil->alamat ?></td>
-                            <td><?= $profil->sejarah ?></td>
+                            <!-- <td><?= $profil->sejarah ?></td>
                             <td><?= $profil->visi ?></td>
-                            <td><?= $profil->misi ?></td>
+                            <td><?= $profil->misi ?></td> -->
                             <td><img src="<?= base_url() . 'uploads/' . $profil->struktur_organisasi ?>" alt="" class="image-display"> <?= $profil->struktur_organisasi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/profil/edit/'.$profil->profil_id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>

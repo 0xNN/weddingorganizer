@@ -24,7 +24,7 @@
         </div>
         <div class="list-group">
             <a href="<?php echo base_url() . 'admin/pelanggan'; ?>" class="list-group-item <?= ($uri == 'pelanggan') ? 'active' : ''; ?>"><i class="fa fa-male fa-fw"></i> Data Pelanggan</a>
-            <a href="<?php echo base_url() . 'admin/pemesanan'; ?>" class="list-group-item <?= ($uri == 'pemesanan') ? 'active' : ''; ?>"><i class="fa fa-envelope-o fa-fw"></i> Data Pemesanan</a>
+           <!--  <a href="<?php echo base_url() . 'admin/pemesanan'; ?>" class="list-group-item <?= ($uri == 'pemesanan') ? 'active' : ''; ?>"><i class="fa fa-envelope-o fa-fw"></i> Data Pemesanan</a> -->
             <a href="<?php echo base_url() . 'admin/pembayaran'; ?>" class="list-group-item <?= ($uri == 'pembayaran') ? 'active' : ''; ?>"><i class="fa fa-file-o fa-fw"></i> Data Bukti Pembayaran</a>
         </div>
     </div>

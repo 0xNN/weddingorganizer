@@ -1,22 +1,22 @@
 <div class="form-group">
     <label for="nama_profil" class="control-label col-sm-3"> Nama Perusahaan </label>
     <div class="col-sm-6">
-        <input type="text" name="nama_profil" value="<?php echo set_value('nama_perusahaan',isset($profil->nama_perusahaan) ? $profil->nama_profil : ''); ?>" class="form-control">
-        <?php echo form_error('nama_profil'); ?>
+        <input type="text" name="nama_perusahaan" value="<?php echo set_value('nama_perusahaan',isset($profil->nama_perusahaan) ? $profil->nama_perusahaan : ''); ?>" class="form-control">
+        <?php echo form_error('nama_perusahaan'); ?>
     </div>
 </div>
 <div class="form-group">
-    <label for="harga_profil" class="control-label col-sm-3"> Pemilik </label>
+    <label for="pemilik" class="control-label col-sm-3"> Pemilik </label>
     <div class="col-sm-4">
         <input type="text" name="pemilik" value="<?php echo set_value('pemilik',isset($profil->pemilik) ? $profil->pemilik : ''); ?>" class="form-control">
         <?php echo form_error('pemilik'); ?>
     </div>
 </div>
 <div class="form-group">
-    <label for="no_telp" class="control-label col-sm-3"> No Telepon </label>
+    <label for="no_tlp" class="control-label col-sm-3"> No Telepon </label>
     <div class="col-sm-4">
-        <textarea name="no_telp" class="form-control"><?php echo set_value('no_telp',isset($profil->no_telp) ? $profil->no_telp : ''); ?></textarea>
-        <?php echo form_error('no_telp'); ?>
+        <textarea name="no_tlp" class="form-control"><?php echo set_value('no_telp',isset($profil->no_tlp) ? $profil->no_tlp : ''); ?></textarea>
+        <?php echo form_error('no_tlp'); ?>
     </div>
 </div>
 <div class="form-group">
@@ -33,7 +33,7 @@
         <?php echo form_error('alamat'); ?>
     </div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <label for="sejarah" class="control-label col-sm-3"> Sejarah </label>
     <div class="col-sm-4">
         <textarea name="sejarah" class="form-control"><?php echo set_value('sejarah',isset($profil->sejarah) ? $profil->sejarah : ''); ?></textarea>
@@ -53,7 +53,7 @@
         <textarea name="misi" class="form-control"><?php echo set_value('misi',isset($profil->misi) ? $profil->misi : ''); ?></textarea>
         <?php echo form_error('misi'); ?>
     </div>
-</div>
+</div> -->
 <div class="form-group">
     <label for="struktur_organisasi" class="control-label col-sm-3">  </label>
     <div class="col-sm-4">

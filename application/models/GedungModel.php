@@ -7,7 +7,7 @@ class GedungModel extends CI_Model {
   {
     // Query jika diterjemahkan 
     // SELECT * FROM gedung
-    $query = $this->db->get('gedung');
+    $query = $this->db->get('profil');
 
     // Lempar hasil query ke Controller Gedung.php
     return $query->result();

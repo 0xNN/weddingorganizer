@@ -355,14 +355,14 @@
                 </div>
                 </div> -->
                  <div class="col-md-4">
-                    <h4>INFORMASI PERUSAHAAN</h4>
+                    <h4>INFORMASI KONTAK</h4>
                         <p align="left"><i class="fa fa-envelope"> Email   : </i> bundafitrypali@gmail.com </p>
                         <p align="left"><i class="fa fa-phone"> Telp   : </i> (+6281367967760) </p>
                         <p align="left"><i class="fa fa-map-marker"> Alamat : </i> Jl.Taman Siswa Kel. Talang Ubi selatan, Kec. Talang Ubi Pendopo, Kabupaten Penukal Abab Lematang Ilir </p>
                 </div> 
                 <div class="col-md-4">
                     <h4>METODE PEMBAYARAN</h4>
-                    <img src="<?php echo base_url(); ?>assets/images/bank.jpeg" width="60%" height="60%">
+                    <img src="<?php echo base_url(); ?>assets/images/bri.png" width="60%" height="60%">
                 </div>
             </div>
         </div>
