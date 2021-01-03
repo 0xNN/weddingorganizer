@@ -79,7 +79,7 @@ $route['admin/logout']['get'] = 'admin/login/logout';
 
 $route['pelanggan/transaksi']['post'] = 'pelanggan/transaksi/store';
 $route['lihat/transaksi/(:num)']['get'] = 'pelanggan/transaksi/show/$1';
-
+$route['pelanggan/konfirmasi/pemesanan/(:num)']['get'] = 'pelanggan/konfirmasi/show/$1';
 
 $route['admin/pemesanan/detail/(:num)']['get'] = 'admin/pemesanan/show/$1';
 $route['admin/pemesanan/update/(:num)']['post'] = 'admin/pemesanan/update/$1';

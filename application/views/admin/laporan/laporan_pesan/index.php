@@ -16,8 +16,8 @@
                         <th>No</th>
                         <th>Kode Transaksi</th>
                         <th>Nama Pemesan</th>
-                        <th>Status</th>
                         <th>No Telp</th>
+                        <th>Paket</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,15 +27,18 @@
                             <td><?= $no++ ?></td>
                             <td>#<?= $pemesanan->id_pemesanan ?></td>
                             <td><?= $pemesanan->nama ?></td>
-                            <td><?= $pemesanan->status ?></td>
                             <td><?= $pemesanan->no_telp ?></td>
-                           <!--  <td width="10%">
+                            <td><?= $pemesanan->nama_paket ?></td>
+                            <!--  <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/pemesanan/detail/'.$pemesanan->id_pemesanan; ?>" class="btn btn-xs btn-info" title="Lihat"><i class="fa fa-eye fa-fw"></i></a>
                             </td> -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="panel-footer">
+            <a target="_blank" href="<?= base_url()."admin/laporanpesan/print" ?>" class="btn btn-warning btn-sm text-right"><i class="fa fa-print"> Download PDF</i></a>
         </div>
     </div>
 </div>

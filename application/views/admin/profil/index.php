@@ -42,8 +42,8 @@
                                 <img id="myImg" src="<?php echo base_url() . 'assets/images/'.$profil->foto ?>" alt="pemilik" class="image-display">
                             </td>
                             <td width="10%">
-                                <a href="<?php echo base_url() . 'admin/profil/edit/'.$profil->profil_id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/profil/delete/'.$profil->profil_id; ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/profil/edit/'.$profil->id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/profil/delete/'.$profil->id; ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

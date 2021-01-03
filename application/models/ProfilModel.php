@@ -7,7 +7,7 @@ class ProfilModel extends CI_Model {
   {
     // Query jika diterjemahkan 
     // SELECT * FROM profil
-    $query = $this->db->get('profil');
+    $query = $this->db->get('modul');
 
    
     return $query->result();

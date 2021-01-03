@@ -15,8 +15,27 @@ class TransaksiModel extends CI_Model {
   public function myTransaction()
   {
     $this->db->where('pelanggan_id',$this->session->userdata('user_id'));
+    // print_r($this->db->get('pemesanan')->result());
+    return $this->db->get('pemesanan')->row();
+  }
 
+  public function transaction()
+  {
+    $this->db->where('pelanggan_id',$this->session->userdata('user_id'));
+    // print_r($this->db->get('pemesanan')->result());
     return $this->db->get('pemesanan');
+  }
+
+  public function combo()
+  {
+    $query = $this->db->select('id_pemesanan,nama_paket,status')
+                      ->from('pemesanan')
+                      ->join('pemesanan_paket','pemesanan_paket.pemesanan_id = pemesanan.id_pemesanan')
+                      ->join('paket','paket.id_paket = pemesanan_paket.id_paket')
+                      ->where('pelanggan_id', $this->session->userdata('user_id'))
+                      ->where('status','pending');
+                      
+    return $query->get();
   }
 
   public function getCount()

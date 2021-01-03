@@ -6,13 +6,6 @@
     </div>
 </div>
 <div class="form-group">
-    <label for="harga_rias" class="control-label col-sm-3"> Harga </label>
-    <div class="col-sm-4">
-        <input type="text" name="harga_rias" value="<?php echo set_value('harga_rias',isset($rias->harga_rias) ? $rias->harga_rias : ''); ?>" class="form-control">
-        <?php echo form_error('harga_rias'); ?>
-    </div>
-</div>
-<div class="form-group">
     <label for="deskripsi" class="control-label col-sm-3"> Deskripsi </label>
     <div class="col-sm-4">
         <textarea name="deskripsi" class="form-control"><?php echo set_value('deskripsi',isset($rias->deskripsi) ? $rias->deskripsi : ''); ?></textarea>

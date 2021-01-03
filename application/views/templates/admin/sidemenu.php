@@ -9,10 +9,8 @@
         </div>
         <div class="list-group">
             <a href="<?= base_url() . 'admin/'; ?>" class="list-group-item <?= ($uri == '') ? 'active' : ''; ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-            <!--  <a href="<?= base_url() . 'admin/gedung'; ?>" class="list-group-item <?= ($uri == 'gedung') ? 'active' : ''; ?>"><i class="fa fa-building-o fa-fw"></i> Data Gedung</a> -->
             <a href="<?= base_url() . 'admin/paket'; ?>" class="list-group-item <?= ($uri == 'paket') ? 'active' : ''; ?>"><i class="fa fa-heart fa-fw"></i> Data Paket</a>
             <a href="<?= base_url() . 'admin/dekorasi'; ?>" class="list-group-item <?= ($uri == 'dekorasi') ? 'active' : ''; ?>"><i class="fa fa-diamond fa-fw"></i> Data Dekorasi</a>
-            <!--   <a href="<?= base_url() . 'admin/dokumentasi'; ?>" class="list-group-item <?= ($uri == 'dokumentasi') ? 'active' : ''; ?>"><i class="fa fa-camera-retro fa-fw"></i> Data Dokumentasi</a> -->
             <a href="<?= base_url() . 'admin/rias'; ?>" class="list-group-item <?= ($uri == 'rias') ? 'active' : ''; ?>"><i class="fa fa-female fa-fw"></i> Data Rias</a> 
             <a href="<?= base_url() . 'admin/user'; ?>" class="list-group-item <?= ($uri == 'user') ? 'active' : ''; ?>"><i class="fa fa-user fa-fw"></i> Data User</a>
             <a href="<?= base_url() . 'admin/profil'; ?>" class="list-group-item <?= ($uri == 'profil') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Data Profil</a>
@@ -35,7 +33,6 @@
         <div class="list-group">
             <a href="<?php echo base_url() . 'admin/laporanpel'; ?>" class="list-group-item <?= ($uri == 'pelanggan') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Laporan Pelanggan</a>
             <a href="<?php echo base_url() . 'admin/laporanpesan'; ?>" class="list-group-item <?= ($uri == 'pemesanan') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Laporan Pemesanan</a>
-            <!--   <a href="<?php echo base_url() . 'admin/laporan'; ?>" class="list-group-item <?= ($uri == 'pegawai') ? 'active' : ''; ?>"><i class="fa fa-book fa-fw"></i> Laporan Pegawai</a> -->
         </div>
     </div>
 </div>

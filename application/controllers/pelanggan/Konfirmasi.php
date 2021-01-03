@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Konfirmasi extends My_Controller {
+class Konfirmasi extends My_Controller { 
 
     public function __construct()
     {
@@ -18,7 +18,8 @@ class Konfirmasi extends My_Controller {
     public function index()
     {
       $data['transaksi'] = $this->TransaksiModel->myTransaction();
-      // print_r($data);
+      $data['combo'] = $this->TransaksiModel->combo();
+      // print_r($data['combo']->result());
       $this->template('index',$data);
     }
 
@@ -30,6 +31,14 @@ class Konfirmasi extends My_Controller {
       $this->load->view('templates/pelanggan/footer');
     }
 
+    public function show($id)
+    {
+      // echo $id;
+      $data['transaksi'] = $this->TransaksiModel->getDataById($id);
+      
+      $this->template('konfirmasi',$data);
+    }
+    
     public function store()
     {
         // if (!$this->upload->do_upload('foto')) {
@@ -53,7 +62,7 @@ class Konfirmasi extends My_Controller {
         var_dump($data);
 
         // INSERT INTO DATABASE
-        $this->db->insert('konfirmasi',$data);
+        $this->db->insert('bukti_bayar',$data);
 
         // REDIRECT TO USER PAGE
         $this->session->set_flashdata('success','Konfirmasi berhasil dilakukan!');

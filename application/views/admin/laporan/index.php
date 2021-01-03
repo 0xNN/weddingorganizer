@@ -9,6 +9,7 @@
         <div class="panel-heading">
             <h4 class="panel-title"><i class="fa fa-book"></i>  Laporan Data Pegawai</h4>
         </div>
+        <div class="panel-body">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
@@ -20,7 +21,7 @@
                         <th>Tugas</th>
                     </tr>
                 </thead>
-                   <tbody>
+                <tbody>
                     <?php $no=1; ?>
                     <?php foreach($pegawais as $pegawai): ?>
                         <tr>
@@ -34,5 +35,8 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+        </div>
+        <div class="panel-footer">
+            <a target="_blank" href="<?= base_url()."admin/laporanpesan/print" ?>" class="btn btn-warning btn-sm text-right"><i class="fa fa-print"> Download PDF</i></a>
         </div>
     </div>

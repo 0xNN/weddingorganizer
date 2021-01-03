@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="card-footer">
-        <a href="<?= base_url() . '#daftar'; ?>" class="btn btn-success btn-block">Pesan</a>
+        <a href="<?= base_url().'pelanggan'; ?>" class="btn btn-success btn-block">Pesan</a>
       </div>
     </div>
   </div>

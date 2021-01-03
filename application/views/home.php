@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,103 +9,14 @@
     <meta name="author" content="">
 
     <title>Bunda Fitry Salon | Wedding Organizer</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <style>
-        #myImg {
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        #myImg:hover {opacity: 0.7;}
-
-        /* The Modal (background) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            padding-top: 100px; /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-        }
-
-        /* Modal Content (image) */
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        /* Caption of Modal Image */
-        #caption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        /* Add Animation */
-        .modal-content, #caption {  
-            -webkit-animation-name: zoom;
-            -webkit-animation-duration: 0.6s;
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-
-        @-webkit-keyframes zoom {
-            from {-webkit-transform:scale(0)} 
-            to {-webkit-transform:scale(1)}
-        }
-
-        @keyframes zoom {
-            from {transform:scale(0)} 
-            to {transform:scale(1)}
-        }
-
-        /* The Close Button */
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* 100% Image Width on Smaller Screens */
-        @media only screen and (max-width: 700px){
-            .modal-content {
-                width: 100%;
-            }
-        }
-    </style>
     <style>
         .card {
         border-radius: 6px;
@@ -139,11 +49,8 @@
     </style>
     <!-- Theme CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
-
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-info navbar-custom navbar-fixed-top">
         <div class="container">
@@ -154,7 +61,6 @@
                 </button>
                 <!-- <a class="navbar-brand page-scroll" href="#page-top">Bunda Fitry Wedding Organizer</a> -->
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -164,13 +70,9 @@
                     <li>
                         <a href="<?= base_url() . 'home'; ?>">Home</a>
                     </li>
-
                     <li>
                         <a class="page-scroll" href="#services">Pelayanan</a>
                     </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#gedung">Gedung</a>
-                    </li> -->
                     <li>
                         <a class="page-scroll" href="#rias">Make Up</a>
                     </li>
@@ -336,34 +238,6 @@
                 </div>
             </div>
     </section>
-
-    <!-- Gedung Section -->
-    <!-- <section id="gedung">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Gedung</h2>
-                    <h3 class="section-subheading text-muted">Pilihan tempat menikah sesuai idaman Anda</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <?php
-                    foreach ($dataGedung as $gedung) {
-                        echo '<div class="col-md-2">';
-                        echo '<div class="card" style="width: 18rem;">';
-                        echo '<img class="card-img-top" src="';
-                        echo base_url().'/uploads'.'/'.$gedung->foto.'">';
-                        echo '<div class="card-body">';
-                        // echo '<h5 class="card-title bg-info">'.$gedung->nama_gedung.'</h5>';
-                        // echo '<p class="card-text">'.$gedung->deskripsi.'</p>';
-                        // echo '<span class="badge badge-primary">RP. '.number_format($gedung->harga_gedung, 2).'</span><br/></br>';
-                        // echo '<a href="daftar" class="btn btn-primary">Pesan</a>';
-                        echo '</div></div></div>';
-                    }
-                ?>
-            </div>
-        </div>
-    </section> -->
     <!-- Rias Section -->
     <section id="rias">
         <div class="container">
@@ -383,12 +257,7 @@
                         echo '<img class="card-img-top" src="';
                         echo base_url().'/uploads'.'/'.$rias->gambar.'" border="5">';
                         echo '<div class="card-body">';
-                        // echo '<h5 class="card-title bg-info">'.$rias->nama_rias.'</h5>';
-                        // echo '<p class="card-text">'.$rias->deskripsi.'</p>';
-                        // echo '<span class="badge badge-primary">RP. '.number_format($rias->harga_rias, 2).'</span><br/></br>';
-                        // echo '<a href="daftar" class="btn btn-primary">Pesan</a>';
                         echo '</div></div></div></div></div>';
-
                     }
                 ?>
             </div>
@@ -410,10 +279,6 @@
                         echo '<img class="card-img-top" src="';
                         echo base_url().'/uploads'.'/'.$dekorasi->foto.'">';
                         echo '<div class="card-body">';
-                        // echo '<h5 class="card-title bg-info">'.$dekorasi->nama_dekorasi.'</h5>';
-                        // echo '<p class="card-text">'.$dekorasi->deskripsi.'</p>';
-                        // echo '<span class="badge badge-primary">RP. '.number_format($dekorasi->harga_dekorasi, 2).'</span><br/></br>';
-                        // echo '<a href="daftar" class="btn btn-primary">Pesan</a>';
                         echo '</div></div></div>';
                     }
                 ?>
@@ -484,38 +349,7 @@
                         </li>
                     </ul>
                 </div>
-               <!--   <div class="col-md-3">
-                    <div class="row">
-                    <h4>Menu Beranda</h4>
-                    <ul class>
-                    <li class="hidden">
-                    <a href="#page-top"></a>
-                    </li>
-                        <li>
-                        <a href="<?= base_url() . 'home'; ?>">Home</a>
-                        </li>
-                        <li>
-                             <a class="page-scroll" href="#services">PELAYANAN</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#rias">MAKE UP</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#dekorasi">DEKORASI</a>
-                        </li>
-                         <li>
-                        <a href="<?= base_url() . 'gedung'; ?>">Tentang Kami</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#daftar">Daftar</a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url() . 'login'; ?>">Login</a>
-                        </li>
-                    </ul>
-                </div>
-                </div> -->
-                 <div class="col-md-4">
+                <div class="col-md-4">
                     <h4>INFORMASI PERUSAHAAN</h4>
                         <p align="left"><i class="fa fa-envelope"> Email   : </i> bundafitrypali@gmail.com </p>
                         <p align="left"><i class="fa fa-phone"> Telp   : </i> (+6281367967760) </p>
@@ -541,46 +375,13 @@
             });
         });
     </script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
     <!-- Contact Form JavaScript -->
     <script src="assets/js/jqBootstrapValidation.js"></script>
-
     <!-- Theme JavaScript -->
     <script src="assets/js/agency.min.js"></script>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-
-        Array.from(document.querySelectorAll("#myImg")).forEach(item => {
-            item.addEventListener("click", event => {
-                modal.style.display = "block";
-                modalImg.src = event.target.src;
-                captionText.innerHTML = event.target.alt;
-            });
-        });
-
-        // Get the <span> element that closes the modal
-        document.querySelector(".close").addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-    </script>
 </body>
-
 </html>

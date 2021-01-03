@@ -31,7 +31,6 @@ class Rias extends Admin_Controller {
     private function validation() {
         $this->form_validation->set_rules('nama_rias','nama_rias Rias','required');
         $this->form_validation->set_rules('deskripsi','Deskripsi','required');
-        $this->form_validation->set_rules('harga_rias','Harga','required|numeric');
     }
 
     public function create()
@@ -55,8 +54,7 @@ class Rias extends Admin_Controller {
         } else {
             $data = array(
                 'nama_rias' => $this->input->post('nama_rias'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'harga_rias' => $this->input->post('harga_rias')
+                'deskripsi' => $this->input->post('deskripsi')
             );
 
             // UPLOAD IMAGE
@@ -100,8 +98,7 @@ class Rias extends Admin_Controller {
         } else {
             $data = array(
                 'nama_rias' => $this->input->post('nama_rias'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'harga_rias' => $this->input->post('harga_rias')
+                'deskripsi' => $this->input->post('deskripsi')
             );
 
             if ($this->input->post('gambar') != null) {

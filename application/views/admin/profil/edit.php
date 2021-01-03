@@ -4,7 +4,7 @@
             <h4 class="panel-title"><i class="fa fa-book"></i> Edit Profil : <?php echo $profil->nama_perusahaan; ?></h4>
         </div>
         <div class="panel-body">
-            <form action="<?php  echo base_url() . 'admin/profil/update/'.$profil->profil_id; ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
+            <form action="<?php  echo base_url() . 'admin/profil/update/'.$profil->id; ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
                 <?php include 'form.php'; ?>
             </form>
         </div>

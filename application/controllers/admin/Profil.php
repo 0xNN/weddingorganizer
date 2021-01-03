@@ -15,7 +15,7 @@ class Profil extends Admin_Controller {
 
     public function index()
     {
-        $data['profil'] = $this->db->get('profil');
+        $data['profil'] = $this->db->get('modul');
 
         $this->template('index',$data);
     }
@@ -68,7 +68,7 @@ class Profil extends Admin_Controller {
             $data['struktur_organisasi'] = $this->upload->data('file_name');
 
             // INSERT INTO DATABASE
-            $this->db->insert('profil',$data);
+            $this->db->insert('modul',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil disimpan!');
@@ -84,7 +84,7 @@ class Profil extends Admin_Controller {
         }
 
         // mengambil data dari table user berdasarkan id
-        $result = $this->db->get_where('profil',['profil_id' => $id]);
+        $result = $this->db->get_where('modul',['id' => $id]);
         $data['profil'] = $result->row();
         $this->template('edit',$data);
     }
@@ -120,8 +120,8 @@ class Profil extends Admin_Controller {
             }
 
             // INSERT INTO DATABASE
-            $this->db->where('profil_id',$id);
-            $this->db->update('profil',$data);
+            $this->db->where('id',$id);
+            $this->db->update('modul',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil diperbarui!');
@@ -131,14 +131,14 @@ class Profil extends Admin_Controller {
 
     public function delete($id)
     {
-        $data = $this->db->get_where('profil',['profil_id' => $id])->row();
+        $data = $this->db->get_where('modul',['id' => $id])->row();
 
         // DELETING IMAGE
         if ($data->struktur_organisasi != '') {
             unlink('assets/images/' . $data->struktur_organisasi);
         }
 
-        $this->db->delete('profil',['profil_id' => $id]);
+        $this->db->delete('modul',['id' => $id]);
 
         $this->session->set_flashdata('success','Data berhasil dihapus!');
         redirect(base_url() . 'admin/profil/');

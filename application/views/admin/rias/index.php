@@ -19,7 +19,6 @@
                         <th>No</th>
                         <th>Foto</th>
                         <th>Jenis</th>
-                        <th>Harga</th>
                         <th>Deskripsi</th>
                         <th>Tools</th>
                     </tr>
@@ -31,7 +30,6 @@
                             <td><?= $no++ ?></td>
                             <td><img src="<?= base_url() . 'uploads/' . $rias->gambar; ?>" alt="" class="image-display"></td>
                             <td><?= $rias->nama_rias ?></td>
-                            <td>Rp <?= $rias->harga_rias ?></td>
                             <td><?= $rias->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/rias/edit/'.$rias->rias_id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>

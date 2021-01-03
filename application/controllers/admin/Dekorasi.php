@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Dekorasi extends Admin_Controller {
 
     public function __construct()
@@ -31,7 +30,6 @@ class Dekorasi extends Admin_Controller {
     private function validation() {
         $this->form_validation->set_rules('nama_dekorasi','Nama Dekorasi','required');
         $this->form_validation->set_rules('deskripsi','Deskripsi','required');
-        $this->form_validation->set_rules('harga_dekorasi','Harga','required|numeric');
     }
 
     public function create()
@@ -55,8 +53,7 @@ class Dekorasi extends Admin_Controller {
         } else {
             $data = array(
                 'nama_dekorasi' => $this->input->post('nama_dekorasi'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'harga_dekorasi' => $this->input->post('harga_dekorasi')
+                'deskripsi' => $this->input->post('deskripsi')
             );
 
             // UPLOAD IMAGE
@@ -103,8 +100,7 @@ class Dekorasi extends Admin_Controller {
         } else {
             $data = array(
                 'nama_dekorasi' => $this->input->post('nama_dekorasi'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'harga_dekorasi' => $this->input->post('harga_dekorasi')
+                'deskripsi' => $this->input->post('deskripsi')
             );
 
             if ($this->input->post('foto') != null) {
@@ -129,7 +125,7 @@ class Dekorasi extends Admin_Controller {
 
         // DELETING IMAGE
         if ($data->foto != '') {
-          unlink('uploads/' . $data->foto);
+            unlink('uploads/' . $data->foto);
         }
 
         $this->db->delete('dekorasi',['dekorasi_id' => $id]);
