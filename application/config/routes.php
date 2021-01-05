@@ -60,7 +60,7 @@ $route['daftar'] = 'pelanggan/daftar/store';
 $route['logout'] = 'pelanggan/daftar/logout';
 
 $route['gedung']['get'] = 'pelanggan/gedung/index';
-$route['tentang']['get'] = 'pelanggan/tentang/index';
+$route['profil']['get'] = 'pelanggan/profil/index';
 $route['paketlengkap']['get'] = 'pelanggan/paketlengkap/index';
 $route['paketa']['get'] = 'pelanggan/paketa/index';
 $route['paketb']['get'] = 'pelanggan/paketb/index';
@@ -80,6 +80,8 @@ $route['admin/logout']['get'] = 'admin/login/logout';
 $route['pelanggan/transaksi']['post'] = 'pelanggan/transaksi/store';
 $route['lihat/transaksi/(:num)']['get'] = 'pelanggan/transaksi/show/$1';
 $route['pelanggan/konfirmasi/pemesanan/(:num)']['get'] = 'pelanggan/konfirmasi/show/$1';
+
+$route['admin/laporanpesan/print/(:num)/(:num)']['get'] = 'admin/laporanpesan/print/$1/$2';
 
 $route['admin/pemesanan/detail/(:num)']['get'] = 'admin/pemesanan/show/$1';
 $route['admin/pemesanan/update/(:num)']['post'] = 'admin/pemesanan/update/$1';

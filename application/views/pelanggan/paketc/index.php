@@ -59,7 +59,11 @@
         </div>
       </div>
       <div class="card-footer">
-        <a href="<?= base_url() . 'pelanggan'; ?>" class="btn btn-success btn-block">Pesan</a>
+      <?php if($user_data > 0): ?>
+          <a href="<?= base_url().'pelanggan'; ?>" class="btn btn-success btn-block">Pesan</a>
+        <?php else: ?>
+          <a href="<?= base_url().'#daftar'; ?>" class="btn btn-success btn-block">Pesan</a>
+        <?php endif; ?>
       </div>
     </div>
   </div>

@@ -37,6 +37,26 @@ class DashboardModel extends CI_Model {
     return $query->result();
   }
 
+  public function printLaporanPemesanan($month, $year){
+    
+    if($month>0) {
+      $this->db->select('*');
+      $this->db->from('pemesanan');
+      $this->db->join('pelanggan','pelanggan.pelanggan_id = pemesanan.pelanggan_id','left');
+      $this->db->join('pemesanan_paket','pemesanan_paket.pemesanan_id = pemesanan.id_pemesanan','left');
+      $this->db->join('paket','paket.id_paket = pemesanan_paket.id_paket','left');
+      $this->db->where('MONTH(tgl_acara)',$month);
+      $this->db->where('YEAR(tgl_acara)',$year);
+  
+      $query = $this->db->get();
+  
+      return $query->result();
+    }
+    else {
+      return $this->dataLaporanPemesanan();
+    }
+  }
+
   public function dataLaporanTahunan($tahun) {
     $query = $this->db->select("*")
       ->from('pemesanan')

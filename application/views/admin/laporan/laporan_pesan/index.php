@@ -10,7 +10,7 @@
             <h4 class="panel-title"><i class="fa fa-book"></i> Laporan Pemesanan</h4>
         </div>
         <div class="panel-body">
-            <table class="table table-bordered table-striped table-hover">
+            <table id="pemesanan" class="table table-bordered table-striped" style="width:100%">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -38,7 +38,36 @@
             </table>
         </div>
         <div class="panel-footer">
-            <a target="_blank" href="<?= base_url()."admin/laporanpesan/print" ?>" class="btn btn-warning btn-sm text-right"><i class="fa fa-print"> Download PDF</i></a>
+            <div class="row">
+                <div class="col-sm-4">
+                    <select class="form-control" name="year" id="year">
+                        <option>--- PILIH TAHUN ---</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <select name="month" id="month" class="form-control">
+                        <option>--- PILIH BULAN ---</option>
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <a id="print" class="btn btn-warning btn-sm text-right"><i class="fa fa-print"></i> Download PDF</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

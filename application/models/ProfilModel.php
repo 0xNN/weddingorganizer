@@ -9,10 +9,15 @@ class ProfilModel extends CI_Model {
     // SELECT * FROM profil
     $query = $this->db->get('modul');
 
-   
     return $query->result();
   }
 
+  public function getProfil()
+  {
+    $query = $this->db->get('modul');
+    
+    return $query->row();
+  }
 }
 
 /* End of file ModelName.php */

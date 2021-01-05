@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 		$this->load->model('RiasModel');
 		$this->load->model('DekorasiModel');
 		$this->load->model('DashboardModel');
+		$this->load->model('ProfilModel');
 	}
 	public function index()
 	{
@@ -22,6 +23,7 @@ class Home extends CI_Controller {
 		$result['paketD'] = $this->DashboardModel->paketD();
 		$result['paketFoto'] = $this->DashboardModel->paketFoto();
 		$result['paketKipas'] = $this->DashboardModel->paketKipas();
+		$result['profil'] = $this->ProfilModel->getProfil();
 
 		$this->load->view('home', $result);
 	}
